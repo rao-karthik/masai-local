@@ -1,0 +1,50 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <style type="text/CSS">
+        #large_box {
+            background-color: rgb(19, 161, 218);
+            width: 400px;
+            height: 300px;
+            border-radius: 5px;
+            display: none;
+        }
+        #small_box {
+            background-color: rgba(165, 42, 42, 0.863);
+            width: 120px;
+            height: 60px;
+            float: right;
+            border-radius: 5px;
+            margin-right: 20px;
+            margin-top: 220px;
+            text-align: center;
+        }
+        #small_box > p {
+            font-size: 20px;
+            margin-top: 18px;
+        }
+        </style>
+    </head>
+    <body>
+        <button>click me</button>
+        <diV id="large_box">
+            <div id="small_box"><p>SUBMIT</p></div>
+        </diV>
+        <script>
+            var btn = document.querySelector("button")
+            var sbt = document.getElementById("small_box");
+            var box = document.getElementById("large_box");
+            function enter_color(){
+                box.style.display = "block"
+                sbt.style.backgroundColor = "rgb(92, 241, 92)";
+            }
+            btn.addEventListener('mouseenter', enter_color)
+
+            function leave_color(){
+                sbt.style.backgroundColor = "rgba(165, 42, 42, 0.863)";
+                box.style.display = "none"
+            }
+            box.addEventListener('mouseleave', leave_color)
+        </script>
+    </body>
+</html>

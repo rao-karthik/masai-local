@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style type="text/CSS">
+        #layout {
+            display: grid;
+            gap: 25px;
+            grid-template: "top top top top"
+                        "left middle-l middle-r right";
+            padding: 150px;
+        }
+        #top {
+            background-color: yellow;
+            grid-area: top;
+            height: 50px;
+        }
+        #left {
+            background: red;
+            height: 150px;
+            grid-area: left;
+        }
+        #middle_l {
+            background: rgba(45, 248, 45, 0.966);
+            height: 150px;
+            grid-area: middle-l;
+        }
+        #middle_r {
+            background: rgb(39, 107, 235);
+            height: 150px;
+            grid-area: middle-r;
+        }
+        #right {
+            background: gray;
+            height: 150px;
+            grid-area: right;
+        }
+        @media only screen and (max-width: 768px) {
+            #layout {
+                grid-template: "top top"
+                            "left middle-r"
+                            "middle-l right";
+            }
+        }
+        @media only screen and (max-width: 600px) {
+            #layout {
+                grid-template: "top"
+                            "left"
+                            "right"
+                            "middle-l"
+                            "middle-r";
+            }
+        }
+        </style>
+    </head>
+    <body>
+        <div id="layout">
+            <div id="top">Navigation</div>
+            <div id="left">Box 1</div>
+            <div id="middle_l">Box 2</div>
+            <div id="middle_r">Box 3</div>
+            <div id="right">Box 4</div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/CSS">
+        body > div {
+            width: 600px;
+            padding: 100px;
+            float: left;
+        }
+        #reg-form input {
+            border: 1px solid black;
+            width: 300px;
+            height: 40px;
+            margin-top: 5px;
+            margin-bottom: 30px;
+        }
+        #reg-form label {
+            font-size: 24px;
+        }
+        input + label {
+            margin-top: 24px;
+        }
+        label, input {
+            display: block;
+        }
+        
+        #reg-form input[type="submit"] {
+            background-color: black;
+            color: white;
+            font-size: 32px;
+            padding: 6px;
+            height: 50px;
+        }
+        #display-form > div {
+            background-color: black;
+            color: white;
+            padding: 30px 20px;
+        }
+        #display-form > div > p:nth-child(odd) {
+            font-size: 24px;
+            margin-bottom: 4px;
+        }
+        #display-form > div > p:nth-child(even) {
+            font-size: 32px;
+            margin-top: 4px;
+            margin-bottom: 30px;
+        }
+        #display-form > div > p:nth-child(2){
+            font-size: 48px;
+        }
+        </style>
+    </head>
+    <body>
+        <div id="reg-form">
+            <form>
+                <label for="name">NAME</label>
+                <input id="name" type="text" />
+                <label for="email">EMAIL</label>
+                <input id="email" type="email" />
+                <label for="mobile">MOBILE</label>
+                <input id="mobile" type="number" />
+                <input type="submit" value="REGISTER" />
+        </div>
+        <div id="display-form">
+            <div>
+                <p>NAME</p>
+                <p>MASAI</p>
+                <p>EMAIL</p>
+                <p>emil@masaischool.com</p>
+                <p>MOBILE</p>
+                <p>9876543210</p>
+            </div>
+        </div>
+    </body>
+</html>

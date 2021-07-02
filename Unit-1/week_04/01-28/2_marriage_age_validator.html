@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <input type="text" id="gender" placeholder="male/female"/>
+        <input type="text" id="year" />
+        <button onclick="marriage()">Check Marriage Age</button>
+        <script>
+            function marriage() {
+                var gender = document.getElementById("gender").value;
+                var year = document.getElementById("year").value;
+                console.log(typeof gender)
+                var age = 2021 - year;
+                var gen = ["male", "female"]
+                if (gender == gen[1] && age >= 18){
+                    alert("Can Marry");
+                    // console.log("can marry-g")
+                }
+                else if (gender == gen[1] && age < 18){
+                    alert("Cannot Marry");
+                    // console.log("cannot marry-g")
+                }
+                else if (gender == gen[0] && age >= 21){
+                    // console.log("can marry");
+                    alert("Can Marry");
+                }
+                else if (gender == gen[0] && age < 21){
+                    // console.log("cannot marry")
+                    alert("Can Marry");
+                }
+            }
+        </script>
+    </body>
+</html>

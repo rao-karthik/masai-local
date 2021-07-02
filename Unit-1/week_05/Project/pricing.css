@@ -1,0 +1,719 @@
+*, ::after, ::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+
+
+
+@media(max-width:600px){
+    nav{background: red;}
+}
+
+html{
+    font-size: 62.5%; /*1rem = 10px */
+    
+
+}
+
+body{
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+nav{
+    background-color:gray;
+    height: 5rem;
+    margin-bottom: 8rem;
+}
+
+#maintop {
+    margin-top: 12rem;
+}
+
+.paragraph{
+    font-size: 1.6rem;
+}
+
+.paragraph_2{
+    font-size: 1.3rem;
+}
+
+.heading_prime {
+font-size: 4rem;
+font-weight: 700;
+line-height: 4.5rem;
+
+}
+
+.heading_secondary{
+font-size: 2.5rem;
+font-weight: 600;
+text-align: center;
+
+}
+
+
+
+
+
+/* Header button*/
+.top_toggle {
+    position: relative;
+}
+
+.top_currency_buttons{
+    position: absolute;
+    /* right: 15rem; */
+    left: -.5rem;
+    bottom: 3rem;
+    border: none;
+}
+
+.top_toggle_button{
+    margin: 2.5rem;
+    border: none;
+    font-weight:400;
+    
+    
+}
+.top_toggle_button:focus{
+    outline: none ;
+    color: #3a008c;
+}
+
+.top_togle_currency{
+    margin-left: 1.5rem;
+    border: none;
+    font-weight:400;
+}
+
+.top_currency_buttons:link, .top_currency_buttons:active{
+    outline:none;
+    color: #3a008c;
+}
+
+.top_currency_buttons:focus{
+    outline: none;
+    color: #3a008c;
+}
+
+.top_togle_currency{
+ outline : none;
+ color: #3a008c;
+}
+
+/*top_aea box of grid*/
+
+.hero_area{
+    position: relative;
+    top : 7rem;
+    width: 122rem;
+    display: grid;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20rem;
+    gap: 3rem 3rem;
+    grid-template-columns: 23% 1fr 1fr 1fr;
+    grid-template-rows: 62rem; 
+
+}
+
+/* stlye applied col1*/
+
+.hero_col1{
+    position: relative;
+    
+}
+
+.hero_col1 span {
+    position: absolute;
+    top: 25%;
+    
+}
+
+.highlight_unsure {
+    margin-top: 5.6rem;
+    margin-left:0.5rem;
+    color:#f3c049;
+}
+
+/* .hero_col2{
+    background-color: thistle;
+} */
+
+.hero_col3{
+    position: relative;
+}
+
+div.hero_col1 p{
+    position: absolute;
+    top: 60%;
+}
+
+div.hero_col1 a{
+    position: absolute;
+    top: 70%;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+/*style applied col2*/
+
+.hero_top_heading{
+    display: inline-block;
+    font-size: 2rem;
+    color: #3a008c;
+    margin-bottom: 1.5rem;
+    padding-left: 2rem;
+
+}
+
+.hero_popular{
+    display: inline-block;
+    position: absolute;
+    padding: .4rem;
+    border-radius: 8rem;
+    color: #3a008c ;
+    background-color: transparent;
+    border: 2px solid #3a008c;
+    font-size: 1.2rem;
+    
+
+}
+
+.u-margin-bottom{
+    margin-bottom: 8.4rem;
+}
+.price_rate
+{
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.price_value{
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.price_rate2{
+    font-size: 1.5rem;
+    font-weight: 1.5rem;
+    margin-top: 4.5rem;
+
+}
+
+.btn_1{
+    padding: 1.5rem 4.5rem;
+    color: white;
+    border: none;
+    border-radius: .5rem;
+    background-color: #3a008c; 
+    font-size: 1.6rem;  
+    margin-top: 2rem;
+
+}
+.btn_2{
+    padding: 1.5rem 4.5rem;
+    color: #3a008c;
+    border-radius: .5rem;
+    background-color: transparent; 
+    border: 2px solid #3a008c;
+    font-size: 1.6rem;  
+    margin-top: 2rem;
+
+}
+.btn_2:hover {
+    padding: 1.5rem 4.5rem;
+    color: white;
+    border: none;
+    border-radius: .5rem;
+    background-color: #3a008c; 
+}
+
+.hero_offer_discription{
+    color: rgb(0, 0 , 0, 0.6);
+    margin-top: 6rem;
+    margin-bottom: 1rem;
+}
+
+.hero_list{
+    margin-left: 1.5rem;
+    margin-top: 8rem;
+}
+.list_item{
+    margin-bottom: 1rem;
+}
+
+.hero_bold_text{
+    display: inline-block;
+    font-size: 1.5rem;
+    margin-top: 1.8rem;
+    
+}
+
+.hero_list2 {
+    margin-left: 1.5rem;
+    margin-top: 2.5rem;
+    margin-bottom: 5rem;
+}
+
+.hero_compare{
+    font-size: 1.5rem;
+    margin-top: 15rem;
+    color: blue;
+    text-decoration: none; 
+}
+
+.hero_offer_discription3{
+    color: rgb(0, 0 , 0, 0.6);
+    margin-top: 6rem;
+    margin-bottom: 2.5rem;
+}
+
+.hero_enterpise_footer{
+    display: inline-block;
+    margin-top: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.hero_col_learn{
+    font-size: 1.5rem;
+    margin-top: 10rem;
+    color: blue;
+    text-decoration: none;
+}
+
+
+
+/* middle page styling */
+
+
+.middle{
+    width: 100%;
+    background: #eef0f2;
+    height: 100rem;
+    display: flex;
+    flex-direction: row;
+    margin-top: 10rem;
+  
+
+}
+.middle_S{
+    width: 80%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+   
+}
+
+.middle_l{
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+    width: 60rem;
+    flex-wrap: wrap;
+    /* border: 2px solid blue; */
+    margin-top: 10rem;
+    
+}
+.middle_quote {
+    position: relative;
+    padding: 10px;
+    float: left;
+}
+
+
+.quote_coma{
+    font-size: 1.8rem;
+    margin-top: 3rem;
+    margin-left: 1rem;
+    width: 30rem;
+    
+}
+
+.quote_coma::before{
+   
+    content: '';
+    background: url(https://webstatic.chargebee.com/assets/web/352/images/icon/quote/cb-quote.svg) no-repeat;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    background-size: contain;
+    opacity: .4;
+    left: 1rem;
+    top: .5rem;
+    
+}
+
+.middle_figure img{
+max-width: 60px;
+border-radius: 50%;
+margin-left: 10rem;
+margin-top:5rem ;
+text-align: center;
+}
+.middle_figure_img_text{
+    text-align: center;
+    margin-top: 2.5rem;
+    margin-left: 7rem;
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+}
+
+.middle_footer_logo{
+    margin-top: 2rem;
+    margin-right: 2rem;
+}
+
+.middle_footer{
+    position: relative;
+    border-top: 1px solid black;
+}
+
+.middle_fotter_logo_big{
+    position: relative;
+    display: inline-block;
+    margin-top: 4rem;
+    margin-left: -5rem;   
+}
+
+.middle_footer_para{
+    position: absolute;
+    bottom: 19rem;
+    width: 30rem;
+    font-size: 1.6rem;
+    left: 30rem;
+}
+
+/* middle form styling*/
+
+.middle_r {
+    background-color: white;
+    border-radius: 1rem;
+    padding: 5rem;
+    font-size: 1.5rem;
+      
+}
+.middle_r{
+    display: flex;
+    height: 77rem;
+    margin: 10px;
+    padding:10 px;
+    width: 50rem;
+    flex-wrap: wrap;
+    margin-top: 10rem;
+    box-shadow: 0 .5rem  1.5rem rgba(0, 0, 0, 0.438);
+    
+}
+
+.Form_star_red{
+    color: red;
+}
+
+.middle_form{
+    font-weight: 600;
+}
+.form_msg{
+    font-size: 1.2rem;
+    color: rgb(0, 0 , 0, 0.6);
+    margin-top: 8rem;
+    
+}
+#Fname,#Email, #name {
+    height: 4rem;
+    width: 35rem;
+}
+#Phone {
+    height: 4rem;
+    width: 10rem;
+}
+#isdcode
+{
+    height: 4rem;
+    width:24.5rem;
+}
+.form_privacy{
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+.form_shedule{
+    color: white;
+    background-color: #3a008c;
+    border-radius: .5rem;
+    margin-top: 4rem;
+    width: 25rem;
+    height: 5rem;
+    font-size: 2rem;
+
+}
+
+/* ask question page style*/
+
+.ask_question {
+    position: relative;
+    width: 100%;
+    height: 70rem; 
+
+}
+.aeroplane{
+    position: absolute;
+    width: 80rem;
+    height: 30rem;
+    background-color: white;
+    top: 10rem;
+    right: 25rem;
+    border-radius: .5rem;
+    box-shadow: 0 .5rem  1.5rem rgba(0, 0, 0, 0.438);
+    background: url(https://webstatic.chargebee.com/assets/web/352/images/launch/launch-banner-pricing.svg);
+    background-size: cover;
+    
+   
+ 
+
+}
+
+
+.top_left_logo::after {
+    content: '';
+    border: 18px solid transparent;
+    border-right-color: #fff;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 16.4rem;
+    /* z-index: -1; */
+    
+}
+.top_left_logo{
+    font-size: 1.7rem;
+    color: black ;
+    background-color: #3a008c;
+    width: 20rem;
+    height: 3.6rem;
+}
+
+.ask {
+    margin-right: 40rem;
+    margin-top: 2rem;
+   
+}
+
+.ask_1 {
+    width: 40rem;
+    margin-left: 6rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.ask_learnmore{
+    text-decoration: none;
+    font-size: 1.4rem;
+    margin-left: 6rem;
+    
+
+}
+
+.frequent_container{
+    position: relative;
+    width: 100%;
+    background:white;
+    height: 50rem;
+    display: flex;
+    flex-direction: row;
+    top: 50rem;
+    
+    
+}
+.frequent_cont{
+    width: 90%;
+    display: flex;
+    margin: auto;
+    justify-content: space-evenly;
+    
+   
+}
+
+
+.frequent_l{
+    width: 35.7rem;
+    
+    /* margin: 10rem; */
+    position: relative;
+
+}
+
+.frequent_r{
+    width: 45rem;
+    /* margin: 10rem; */
+
+}
+.freqeunt_img{
+    width: 100%;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+
+img[alt=frequentman]{
+
+ border-radius: 50rem;
+ width: 10rem;
+ height: 10rem;
+
+
+}
+
+.frequent_coma{
+    margin-top: 2rem;
+    line-height: 3rem;
+    position: relative;
+    font-size: 1.6rem;
+    text-align: center;
+
+}
+.frequent_red{
+    color: red;
+}
+
+.frequent_coma::before{
+   
+    content: '';
+    background: url(https://webstatic.chargebee.com/assets/web/352/images/icon/quote/cb-quote.svg) no-repeat;
+    width: 6rem;
+    height: 6rem;
+    position: absolute;
+    background-size: contain;
+    opacity: .6;
+    left: 1rem;
+    top: -2rem;
+    
+}
+.frequent_director{
+    font-size: 1.6rem;
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 23.5rem;
+    
+}
+
+.profit_link{
+    width: 100%;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.profit_not{
+    font-size: 1.7rem;
+    color: black;
+    
+    
+}
+
+.profit_Rallying{
+    color: black;
+    font-size: 1.3rem;
+
+}
+.frequent_heading{
+    text-align: left;
+    font-size: 2rem;
+    display: inline-block;
+    margin-bottom: 3.7rem;
+}
+
+.faq {
+    margin-top: 4rem;
+    position: relative;
+    width: 40rem;
+    border: none;
+    height: 5rem;
+    display: inline-block;
+    text-align: left;
+    margin-left: 5rem;
+    background-color: transparent;
+
+}
+
+.faq_answer{
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    display: none;
+    color: rgba(0, 0, 0, 0.68);
+    text-align: left;
+
+}
+
+.faq_question{
+    display: inline-block;
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    color: rgba(0, 0, 0, 0.838);
+  
+}
+
+.faq:focus{
+    outline:none;
+}
+
+
+.faq:focus .faq_question{
+    font-weight: 600;
+}
+
+.faq:focus .faq_answer{
+    display: inline-block;
+}
+
+.faq_read{
+    width: 40rem;
+    margin-left: 5rem;
+    height: 5rem;
+    margin-top: 4rem;
+    border: none;
+    background-color: transparent;
+}
+
+.faq_link{
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 31rem;
+}
+.frequent_footer{
+    display: flex;
+    margin-top: 90rem;
+    justify-content: space-between;
+    width: 82%;
+    margin-left: auto;
+    margin-left: auto;
+}
+
+.frequent_line{
+    font-size: 2.3rem;
+
+}
+
+.frequent_btn{
+    margin-right: 25rem;
+    margin-top: 2.1rem;
+    
+}
+
+.frequent_button{
+    padding: 1.5rem 4.5rem;
+    color: white;
+    border: none;
+    border-radius: .5rem;
+    background-color: #3a008c; 
+    font-size: 1.6rem; 
+}
+
+#foot {
+    margin-top: 70px;
+}

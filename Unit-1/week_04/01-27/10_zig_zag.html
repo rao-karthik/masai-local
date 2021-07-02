@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style type="text/CSS">
+        .flex {
+            display: flex;
+            justify-content: center;
+        }
+        .flex > div {
+            height: 200px;
+            background-color: teal;
+            flex-basis: 200px;
+            margin: 25px;
+            border-radius: 5px;
+        }
+        #top > div:nth-child(2), #middle > div:nth-child(1), #bottom > div:nth-child(3) {
+            flex-grow: 1;
+        }
+        #middle > div:nth-child(2) {
+            margin-left: 1px;
+            margin-right: 1px;
+        }
+        </style>
+    </head>
+    <body>
+        <div id="top" class="flex">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div id="middle" class="flex">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div id="bottom" class="flex">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </body>
+</html>

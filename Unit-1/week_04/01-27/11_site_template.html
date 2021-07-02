@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style type="text/CSS">
+        #layout {
+            display: grid;
+            gap: 30px;
+            padding: 150px;
+            grid-template: "top top top"
+                        "left right right";
+        }
+        #layout > div:nth-child(1) {
+            background-color: red;
+            height: 75px;
+            grid-area: top;
+        }
+        #layout > div:nth-child(2) {
+            background-color:rgb(17, 218, 17);
+            height: 500px;
+            grid-area: left;
+        }
+        #layout > div:nth-child(3) {
+            background-color: teal;
+            height: 500px;
+            grid-area: right;
+        }
+        </style>
+    </head>
+    <body>
+        <div id="layout">
+            <div id="top"></div>
+            <div id="left"></div>
+            <div id="right"></div>
+        </div>
+    </body>
+</html>

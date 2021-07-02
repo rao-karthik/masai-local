@@ -1,0 +1,110 @@
+1<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style type="text/CSS">
+        .flex {
+            display: flex;
+        }
+        .flex > div {
+            height: 200px;
+            background-color: teal;
+            flex-basis: 200px;
+            margin: 20px;
+            border-radius: 5px;
+        }
+        #top > div:nth-child(2), #middle > div:nth-child(1), #bottom > div:nth-child(3) {
+            /* flex-grow: 1; */
+            flex-basis: 500px;
+        }
+        #layout {
+            display: grid;
+            gap: 25px;
+            grid-template-columns: 150px 150px 150px 150px;
+            grid-template-rows: 150px 150px 150px 150px;
+            /* width: 700px; */
+            /* margin: auto; */
+            justify-content: center;
+        }
+        #layout > div {
+            background-color: teal;
+            border-radius: 5px;
+        }
+        #layout > div:nth-child(8){
+            grid-row-start: 3;
+            grid-column-start: 1;
+        }
+        #layout > div:nth-child(9){
+            grid-row-start: 3;
+            grid-column-start: 2;
+        }
+        #layout > div:nth-child(10){
+            grid-row-start: 4;
+            grid-column-start: 1;
+        }
+        #layout1 {
+            display: grid;
+            gap: 25px;
+            grid-template: "nav nav"
+                        " left right";
+        }
+        #nav {
+            height: 75px;
+            background-color: yellow;
+            grid-area: nav;
+        }
+        #left {
+            height: 350px;
+            background: red;
+            grid-area: left;
+        }
+        #right {
+            height: 350px;
+            background: green;
+        }
+        @media (max-width: 600px){
+            #layout1 {
+                grid-template: "nav"
+                            "right"
+                            "left" ;
+            }
+        }
+        </style>
+    </head>
+    <body>
+        <div id="top" class="flex">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div id="middle" class="flex">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div id="bottom" class="flex">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <hr/>
+        <div id="layout">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+        </div>
+        <hr/>
+        <div id="layout1">
+            <div id="nav"></div>
+            <div id="left"></div>
+            <div id="right"></div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+            var bdy = document.querySelector("body");
+            var btn = document.querySelector("button")
+            function random(number){
+                    return Math.floor(Math.random()*number);
+                }
+
+                function r_color(){
+                    var random_color =  'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+                    return random_color;
+                }
+
+                function set_random_color(){
+                    var color_val = r_color();
+                    bdy.style.backgroundColor = color_val;
+                }
+                window.addEventListener('resize', set_random_color)
+        </script>
+    </body>
+</html>

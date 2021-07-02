@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Sans';
+    text-decoration: none;
+}
+nav {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    max-width: 1920px;
+    margin: auto;
+}
+.header a {
+    color: #4e5058;
+}
+.hover:hover {
+    padding-left: 5px;
+}
+.demo a, .schedule_purple a, .head_sch a {
+    color: white;
+}
+.login {
+    color: black;
+}
+.learn_more a {
+    color: #000ff0;
+}
+.display_flex {
+    display: flex;
+}
+.display_grid {
+    display: grid;
+}
+.header {
+    width: 100%;
+    height: 50px;
+    font-size: 15px;
+    color: #4e5058;
+    padding-left: 10%;
+    padding-right: 10%;
+    background-color: #f6f9fbf5;
+    box-shadow: 0 200px 500px;
+}
+.header > div {
+    margin-right: 40px;
+    margin-top: 20px;
+}
+.header > div:nth-child(1) {
+    margin-top: 13px;
+}
+.logo {
+    width: 110px;
+    height: 34px;
+}
+.login_demo {
+    flex-grow: 1;
+    flex-direction: row-reverse;
+}
+.login_demo > div:nth-child(2) {
+    margin-right: 20px;
+}
+.login_demo > div:nth-child(2) > div{
+    margin-right: 5px;
+}
+.login_demo > div:nth-child(2) > div:nth-child(2){
+    margin-right: 5px;
+}
+.schedule_orange {
+    background-color: #ff7846;
+    height: 36px;
+    width: 180px;
+    text-align: center;
+    justify-content: center;
+    margin-top: -10px;
+    color: white;
+    border-radius: 3px;
+}
+.schedule_orange i, .login_demo i {
+    margin-top: 10px;
+}
+.demo{
+    margin-top: 9px;
+    margin-right: 5px;
+}
+/* dropdown_product */
+.header_dropdown_product {
+    padding-left: 10%;
+    padding-top: 1.5%;
+    height: 300px;
+    background-color: #f9f9f9;
+    display: none;
+    z-index: 9;
+}
+.dropdown_content > div{
+    font-size: 14px;
+    width: 250px;
+    height: 270px;
+    line-height: 30px;
+    color: #000ff0;
+}
+.dropdown_content > div > div:nth-child(1){
+    color: black;
+    font-weight: 600;
+}
+.dropdown_content > div:nth-child(3){
+    margin-left: -50px;
+}
+.dropdown_content > div:nth-child(5){
+    margin-left: -30px;
+}
+.header_dropdown_solutions {
+    display: none;
+    padding-left: 10%;
+    padding-top: 1.5%;
+    background-color: #f9f9f9;
+    z-index: 9;
+}
+.drop_sol > div { 
+    width: 190px;
+}
+.drop_sol > div:nth-child(2) {
+    margin-left: -70px;
+}
+.drop_sol > div:nth-child(5) {
+    margin-left: 5px;
+}

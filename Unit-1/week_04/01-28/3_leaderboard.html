@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/CSS">
+        #main {
+            width: 450px;
+            margin: auto;
+        }
+        #min-max {
+            display: flex;
+            gap: 250px;
+        }
+        #min {
+            background-color: red;
+            width: 100px;
+            
+        }
+        #min-max p {
+            text-align: center;
+            font-size: 25px;
+            margin-top: 5px;
+        }
+        #max {
+            background-color: rgb(21, 224, 21);
+            width: 100px;
+        }
+        #score {
+            width: 200px;
+            background-color: grey;
+            margin-left: 120px;
+            margin-bottom: 20px;
+        }
+        .numbers {
+            display: flex;
+            height: 70px;
+            margin: 20px;
+            padding-left: 75px;
+            gap: 20px;
+            text-align: center;
+            font-size: 40px;
+        }
+        .numbers > div {
+            flex-basis: 70px;
+        }
+        #last {
+            margin-left: 90px;
+        }
+        #last > button{
+            background-color: purple;
+        }
+        .numbers button {
+            width: 100%;
+            height: 100%;
+            background-color: rgb(67, 88, 9);
+            font-size: 35px;
+        }
+        #no2, #no4, #no5, #no6, #no8 {
+            background-color: rgb(231, 95, 17);
+        }
+        #enter {
+            width: 250px;
+            height: 70px;
+            background-color: black;
+            color: white;
+            font-size: 35px;
+            margin-left: 95px;
+        }
+        #score, #min, #max {
+            height: 54px;
+            padding-top: 16px;
+            text-align: center;
+            font-size: 35px;
+        }
+        #main > div:nth-child(2) {
+            font-size: 30px;
+            text-align: center;
+        }
+        #main > div:nth-child(2) > p {
+            margin-bottom: 0px;
+            margin-top: 5px;
+        }
+        #min-max > div > div, #main > div:nth-child(3) {
+            border: 2px solid black;
+        }
+        </style>
+    </head>
+    <body>
+        <div id="main">
+            <div id="min-max">
+                <div>
+                    <div id="min">43</div>
+                    <p>MIN</p>
+                </div>
+                <div>
+                    <div id="max">2019</div>
+                    <p>MAX</p>
+                </div>
+            </div>
+            <div><p>SCORE</p></div>
+            <div id="score"></div>
+            <div class="numbers">
+                <div>
+                    <button onclick="input(1);" id="no1">1</button>
+                </div>
+                <div>
+                    <button onclick="input(2);" id="no2">2</button>
+                </div>
+                <div>
+                    <button onclick="input(3);" id="no3">3</button>
+                </div>
+            </div>
+            <div class="numbers">
+                <div>
+                    <button onclick="input(4);" id="no4">4</button>
+                </div>
+                <div>
+                    <button onclick="input(5);" id="no5">5</button>
+                </div>
+                <div>
+                    <button onclick="input(6);" id="no6">6</button>
+                </div>
+            </div>
+            <div class="numbers">
+                <div>
+                    <button onclick="input(7);" id="no7">7</button>
+                </div>
+                <div>
+                    <button onclick="input(8);" id="no8">8</button>
+                </div>
+                <div>
+                    <button onclick="input(9);" id="no9">9</button>
+                </div>
+            </div>
+            <div class="numbers">
+                <div id="last"">
+                    <button onclick="input(0);" id="no0">0</button>
+                </div>
+            </div>
+            <button onclick="submit()" id="enter">Enter</button>
+        </div>
+        <script>
+            var score = "";
+            var min = document.querySelector("#min").textContent;
+            var max = document.querySelector("#max").textContent;
+            function input(num){
+                score = score + num;
+                var scoreboard = document.querySelector("#score");
+                scoreboard.innerHTML = score;
+            }
+            function submit(){
+                var minimum = document.querySelector("#min")
+                var maximum = document.querySelector("#max")
+                if (Number(score) < Number(minimum.innerHTML)){
+                    minimum.innerHTML = score;
+                }
+                else if (Number(score) > Number(maximum.innerHTML)){
+                    maximum.innerHTML = score;
+                }
+                reset();
+            }
+            function reset(){
+                var scoreboard = document.querySelector("#score");
+                scoreboard.innerHTML = "";
+                score = "";
+            }
+        </script>
+    </body>
+</html>

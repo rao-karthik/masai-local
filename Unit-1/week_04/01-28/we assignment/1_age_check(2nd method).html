@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div id="problem1">
+            <input type="text" id="year" />
+            <button onclick="checkAge()">Check Age</button>
+            <p id="message"></p>
+        </div>
+        </div>
+        <script>
+            function checkAge() {
+                var parent = document.querySelector("#problem1 > #year")
+                var year = Number(parent.value);
+                var age = 2021 - year;
+                console.log(age)
+                var message = document.querySelector("#problem1 > #message")
+                if (age == 18){
+                    message.textContent = "You are just old enough to drive in India!";
+                } else if (age > 18) {
+                    message.textContent = "You can drive in India!";
+                } else {
+                    message.textContent = "You can't drive in India";
+                }
+            }
+        </script>
+    </body>    
+</html>

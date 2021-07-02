@@ -1,0 +1,74 @@
+/* bottom head */
+.bottom_head {
+    padding-top: 200px;
+    width: 1400px;
+    margin: auto;
+}
+.bottom_head > h5{
+    font-size: 36px;
+    width: 700px;
+    margin-right: 33%;
+}
+.head_sch {
+    margin-top: 80px;
+    background-color: #500ad2;
+    flex-basis: 240px;
+    font-weight: 500;
+    justify-content: center;
+    height: 54px;
+    font-size: 20px;
+    border-radius: 5px;
+    color: white;
+    align-items: center;
+}
+.head_sch i {
+    margin-top: 7px;
+    padding-left: 5px;
+}
+/* Services */
+.comp_services {
+    width: 80%;
+    margin: auto;
+    margin-top: 80px;
+    margin-left: 19%;
+}
+.comp_services > div {
+    font-size: 16px;
+    flex-basis: 250px;
+    margin-right: 100px;
+    line-height: 30px;
+    justify-content: center;
+    color:  #000ff0;
+}
+.comp_services p {
+    font-size: 18px;
+    color: black;
+    font-weight: 500;
+}
+.comp_services i {
+    color: black;
+    margin-top: 22px;
+    padding-left: 5px;
+}
+/* footer */
+#footer {
+    margin-top: 99px;
+    display: flex;
+    padding-left: 19%;
+    padding-right: 19%;
+    padding-bottom: 100px;
+    flex-basis: 300px;
+}
+#footer > div {
+    flex-basis: 150px;
+}
+#footer > div:nth-child(2){
+    display: flex;
+    flex-direction: row-reverse;
+    flex-grow: 1;
+}
+.social_logo {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+}

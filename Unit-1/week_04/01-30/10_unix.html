@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Unix</title>
+        <style>
+            * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Sans';
+        }* {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Sans';
+        }
+        html, body, #main_cont {
+            width: 100%;
+            height: 100%;
+        }
+        #linus_cont {
+            width: 470px;
+            height: 320px;
+            background-color:rgba(227,218,219,255);
+            margin: auto;
+            padding: 15px;display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+        #main_cont img {
+            width: 120px;
+            height: 150px;
+        }
+        #linus_cont h4 {
+            font-size: 40px;
+            color: rgba(9,9,132,255);
+            margin-top: 20px;
+        }
+        #linus_cont p {
+            font-size: 30px;
+            margin-top: 20px;
+        }
+        #sal_cont {
+            width: 730px;
+            height: 150px;
+            margin: auto;
+            display: flex;
+            margin-top: 50px;            
+        }
+        #sal_cont > div:nth-child(2) {
+            margin-left: 30px;
+        }
+        #sal_cont h3 {
+            font-size: 50px;
+            margin-top: 0px;
+        }
+        #sal_cont p {
+            margin-top: 20px;
+        }
+        #orange_cont {
+            margin: auto;
+            background-color: rgba(211,85,0,255);
+            width: 1060px;
+            margin-top: 50px;
+            height: 150px;
+            display: flex;
+        }
+        #orange_cont > div:nth-child(1), #orange_cont > div:nth-child(3){
+            width: 500px;
+            margin-top: 20px;
+        }
+        #orange_cont > div:nth-child(1) {
+            margin-left: 25px;
+            width: 300px;
+            margin-right: 200px;
+        }
+        #orange_cont > div > p:nth-child(1){
+            font-size: 30px;
+            color: white;
+            margin-bottom: 20px;
+        }
+        #orange_cont > div:nth-child(3) {
+            text-align: right;
+        }
+        #line {
+            background-color: black;
+            width: 10px;
+            height: 110px;
+            margin-top: 20px;
+        }
+        html, body, #main_cont {
+            width: 100%;
+            height: 100%;
+        }
+        #linus_cont {
+            width: 470px;
+            height: 320px;
+            background-color:rgba(227,218,219,255);
+            margin: auto;
+            padding: 15px;display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+        #main_cont img {
+            width: 120px;
+            height: 150px;
+        }
+        #linus_cont h4 {
+            font-size: 40px;
+            color: rgba(9,9,132,255);
+            margin-top: 20px;
+        }
+        #linus_cont p {
+            font-size: 30px;
+            margin-top: 20px;
+        }
+        #sal_cont {
+            width: 730px;
+            height: 150px;
+            margin: auto;
+            display: flex;
+            margin-top: 50px;            
+        }
+        #sal_cont > div:nth-child(2) {
+            margin-left: 30px;
+        }
+        #sal_cont h3 {
+            font-size: 50px;
+            margin-top: 0px;
+            color: rgba(215,24,26,255);
+        }
+        #sal_cont p {
+            margin-top: 20px;
+        }
+        #orange_cont {
+            margin: auto;
+            background-color: rgba(211,85,0,255);
+            width: 1060px;
+            margin-top: 50px;
+            height: 150px;
+            display: flex;
+        }
+        #orange_cont > div:nth-child(1), #orange_cont > div:nth-child(3){
+            width: 500px;
+            margin-top: 20px;
+        }
+        #orange_cont > div:nth-child(1) {
+            margin-left: 25px;
+            width: 300px;
+            margin-right: 200px;
+        }
+        #orange_cont > div > p:nth-child(1){
+            font-size: 30px;
+            color: white;
+            margin-bottom: 20px;
+        }
+        #orange_cont > div:nth-child(3) {
+            text-align: right;
+        }
+        #line {
+            background-color: black;
+            width: 10px;
+            height: 110px;
+            margin-top: 20px;
+        }
+        </style>
+    </head>
+    <body>
+       <button>Create Page</button>
+    </body>
+    <script>
+        var body = document.querySelector("body");
+        var btn =  document.querySelector("button")
+        
+        function unix() {
+        var main_con = document.createElement("div");
+        main_con.setAttribute("id", "main_cont");
+
+        var linus_con = document.createElement("div");
+        linus_con.setAttribute("id", "linus_cont");
+
+        var linus_div = document.createElement("div");
+        var linus_img = document.createElement("img");
+        linus_img.setAttribute("src", "https://masai-course.s3.ap-south-1.amazonaws.com/resources/images/linus.jpg");
+        var linus_h4 = document.createElement("h4");
+        linus_h4.textContent = "Linus Torvalds";
+        var linus_p = document.createElement("p");
+        linus_p.textContent = "The creator of Linux & Git";
+
+        body.append(main_con);
+        main_con.append(linus_con);
+        linus_con.append(linus_div);
+        linus_div.append(linus_img);
+        linus_con.append(linus_h4);
+        linus_con.append(linus_p);
+
+        var sal_con = document.createElement("div");
+        sal_con.setAttribute("id", "sal_cont")
+
+        var sal_img_div = document.createElement("div");
+        var sal_img = document.createElement("img");
+        sal_img.setAttribute("src", "https://masai-course.s3.ap-south-1.amazonaws.com/resources/images/khan.jpg");
+        var sal_txt_div = document.createElement("div");
+        var sal_h3 = document.createElement("h3");
+        sal_h3.textContent = "Sal Khan";
+        var sal_p = document.createElement("p");
+        sal_p.textContent = ("Salman Khan is the founder of the Khan Academy which has a mission of providing a free world-class education for anyone, anywhere.")
+
+        main_con.append(sal_con);
+        sal_con.append(sal_img_div);
+        sal_img_div.append(sal_img);
+        sal_con.append(sal_txt_div);
+        sal_txt_div.append(sal_h3);
+        sal_txt_div.append(sal_p);
+
+        var orange_con = document.createElement("div");
+        orange_con.setAttribute("id", "orange_cont");
+
+        var ken_con = document.createElement("div");
+        var ken_p1 = document.createElement("p");
+        ken_p1.textContent = "Ken Thompson";
+        var ken_p2 = document.createElement("p");
+        ken_p2.textContent = "Designed and Implemented the original Unix Operation System";
+        var lin = document.createElement("div");
+        lin.setAttribute("id", "line");
+        var dennis_con = document.createElement("div");
+        var dennis_p1 = document.createElement("p");
+        dennis_p1.textContent = "Dennis Ritchie";
+        var dennis_p2 = document.createElement("p");
+        dennis_p2.textContent = "The creator of C Programming Language";
+
+        main_con.append(orange_con);
+        orange_con.append(ken_con);
+        ken_con.append(ken_p1);
+        ken_con.append(ken_p2);
+        orange_con.append(lin);
+        orange_con.append(dennis_con);
+        dennis_con.append(dennis_p1);
+        dennis_con.append(dennis_p2);
+        }
+
+        btn.addEventListener("click", unix);
+    </script>
+</html>

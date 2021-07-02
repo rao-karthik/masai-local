@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Practise Deletions</title>
+    </head>
+    <body>
+        <h1>First H1</h1>
+        <h1>Second H1</h1>
+        <h3>First H3</h3>
+        <h3>Second H3</h3>
+        <div id="headings">
+            <h6>First H6</h6>
+            <h6>Second H6</h6>
+            <h6>Third H6</h6>
+        </div>
+        <div id="cont">
+            <div class="green">First DIV</div>
+            <div class="red">Second DIV</div>
+            <div class="blue">Third DIV</div>
+            <p class="green">First P</p>
+            <p class="red">Second P</p>
+            <p class="blue">Third P</p>
+        </div>
+        <hr/>
+        <button onclick="removeH1()">Remove H1</button>
+        <button onclick="removeH3()">Remove H3</button>
+        <button onclick="removeH6()">Remove H6</button>
+        <button onclick="removegreen()">Remove Green</button>
+        <button onclick="removediv()">Remove DIVS</button>
+        <script>
+            function removeH1() {
+                var h1 = document.querySelectorAll('h1');
+                for (var i = 0; i < h1.length; i++){
+                    h1[i].remove();
+                }
+            }
+            function removeH3() {
+                var h3 = document.querySelector('h3');
+                    h3.remove();
+            }
+            function removeH6() {
+                var h6 = document.querySelectorAll('h6');
+                for (var i = 0; i < h6.length; i++){
+                    h6[i].remove();
+                }
+            }
+            function removegreen() {
+                var parent = document.getElementById("cont");
+                var greens = parent.querySelectorAll('.green');
+                for (var i = 0; i < greens.length; i++){
+                    greens[i].remove();
+                }
+            }
+            function removediv() {
+                var parent = document.getElementById("cont");
+                var div = parent.querySelectorAll('div');
+                for (var i = 0; i < div.length; i++){
+                    div[i].remove();
+                }
+            }
+        </script>
+    </body>
+</html>

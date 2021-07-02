@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/CSS">
+        body > div{
+            width: 1200px;
+            height: 400px;
+            background-color: rgba(0, 0, 0, 0.808);
+            margin: auto;
+            margin-top: 100px;
+        }
+        #intro div {
+            width: 600px;
+            height: 150px;
+            margin: auto;
+        }
+        #intro p {
+            text-align: center;
+            color: white;
+            font-size: 25px;
+            padding-top: 50px;
+        }
+        #reg-form label {
+            color: white;
+            float: left;
+            padding-right: 150px;
+        }
+        #reg-form input {
+            float: left;
+            margin-right: 35px;
+            width: 170px;
+            height: 30px;
+            border-radius: 5px;
+            display: block;
+        }
+        #reg-form > form {
+            width: 850px;
+            height: 80px;
+            margin: auto;
+            margin-top: 60px;
+        }
+        #reg-form > form > input{
+            height: 45px;
+            margin-top: -4px;
+            background-color: rgba(36, 241, 125, 0.877);
+        }
+        .clear {
+            clear: both;
+        }
+        #terms > p {
+            color: rgba(0, 0, 0, 0.685);
+            text-align: center;
+        }
+        </style>
+    </head>
+    <body>
+        <div>
+            <div id="intro">
+                <div>
+                    <p> Get started for free - join the millions of developers already using GitHub to share their code, work together, and build amazing things.</p>
+                </div>
+            </div>
+            <div id="reg-form">
+                <form>
+                    <div>
+                        <label for="name">Username</label>
+                        <label for="mobile">Password</label>
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="clear"></div>
+                    <div>
+                        <input id="name" type="text" placeholder="Pick a Username"/>
+                        <input id="email" type="email" placeholder="Your email address" />
+                        <input id="mobile" type="text" placeholder= "Create a password" />
+                    </div>
+                    <input type="submit" value="Sign Up for GitHub" />
+                </form>
+            </div>
+            <div id="terms">
+                <p>By clicking "Sign up for Github", you agree to our terms of service and privacy settlement. We'll occasionally send you account related emails</p>
+            </div>
+        </div>
+    </body>
+</html>

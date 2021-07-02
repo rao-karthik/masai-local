@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #opportunities {
+            display: flex;
+            justify-content: center;
+            background-color: rgb(248, 249, 254);
+        }
+        .opp_box {
+            height: 100px;
+            flex-basis: 25%;
+            margin: 10px;
+            border-radius: 5px;
+            max-width: 300px;
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+        .opp_box1{
+            background-color: rgb(241, 195, 23);
+        }
+        .opp_box2 {
+            background-color: rgb(53, 94, 216);
+        }
+        .opp_box3 {
+            background-color: rgb(0, 196, 220);
+        }
+        .opp_box > div {
+            margin-left: 15px;
+        }
+        .opp_box > div:nth-child(1){
+            width: 60px;
+            height: 60%;
+        }
+        .opp_box h4{
+            font-size: 25px;
+            margin-bottom: 2px;
+            margin-top: 15px;
+        }
+        .opp_box p{
+            margin-top: 2px;
+        }
+        .opp_box img {
+            width: 100%;
+            height: 100%;
+        }
+        #courses {
+            text-align: center;
+        }
+        #courses > h3 {
+            font-size: 50px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            color: rgb(31, 59, 99);
+        }
+        .course_content {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .course_content > div {
+            justify-content: center;
+            flex-basis: 150px;
+            background-color: rgb(248, 249, 254);
+            color: rgb(96, 92, 128);
+        }
+        #subjects {
+            display: grid;
+            grid-template: "left middle right";
+            height: 430px;
+            gap: 20px;
+            max-width: 800px;
+            margin: auto;
+            margin-top: 20px;
+        }
+        #left {
+            background-color: rgb(248, 249, 254);
+            height: auto;
+            grid-area: left;
+        }
+        #middle {
+            background-color: rgb(248, 249, 254);
+            height: auto;
+            grid-area: middle;
+        }
+        #right {
+            background-color: rgb(248, 249, 254);
+            height: auto;
+            grid-area: right;
+        }
+        #subjects > div {
+            max-width: 250px;
+            display: grid;
+            grid-template: "top"
+                            "bottom";
+        }
+        #subjects > div > div{
+            max-width: 100%;
+        }
+        #subjects > div > div:nth-child(2){
+            margin-left: 10px;
+            margin-right: 5px;
+        }
+        #subjects button {
+            background-color: rgb(248, 249, 254);
+            border: 1px sloid rgb(131, 224, 238);
+            color: rgb(131, 224, 238);
+            width: 120px;
+            height: 40px;
+            margin-left: 55px;
+        }
+        #subjects img {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="opportunities">
+        <div class="opp_box opp_box1">
+            <div>
+                <img src = "https://via.placeholder.com/100x100" />
+            </div>
+            <div>
+                <h4>Scholarship</h4>
+                <p>Available</p>
+            </div>
+        </div>
+        <div class="opp_box opp_box2">
+            <div>
+                <img src = "https://via.placeholder.com/100x100" />
+            </div>
+            <div>
+                <h4>Scholarship</h4>
+                <p>Available</p>
+            </div>
+        </div>
+        <div class="opp_box opp_box3">
+            <div>
+                <img src = "https://via.placeholder.com/100x100" />
+            </div>
+            <div>
+                <h4>Scholarship</h4>
+                <p>Available</p>
+            </div>
+        </div>
+    </div>
+    <div id="courses">
+        <h3>Popular Program</h3>
+        <div class="course_content">
+            <div>Graduate</div>
+            <div>PostGraduate</div>
+            <div>PHD Scholarships</div>
+            <div>Training</div>
+        </div>
+    </div>
+    <div id="subjects">
+        <div id="left">
+            <div>
+                <img src = "https://via.placeholder.com/200x150" />
+            </div>
+            <div>
+                <p>Agriculture</p>
+            <h3>Chemical Engineering</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <button>APPLY NOW</button>
+            </div>
+        </div>
+        <div id="middle"></div>
+            <div>
+                <img src = "https://via.placeholder.com/200x150" />
+            </div>
+            <div>
+                <p>Agriculture</p>
+                <h3>Chemical Engineering</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <button>APPLY NOW</button>
+                </div>
+        </div>
+        <div id="right">
+            <div>
+                <img src = "https://via.placeholder.com/200x150" />
+            </div>
+            <div>
+                <p>Agriculture</p>
+                <h3>Chemical Engineering</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <button>APPLY NOW</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

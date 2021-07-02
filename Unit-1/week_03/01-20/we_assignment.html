@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/CSS">
+            .bar {
+                background-color: teal;
+                float: left;
+                width: 150px;
+                margin: 20px;
+                height: 500px;
+            }
+            #bars-cont {
+                width: 760px;
+                margin: auto;
+                margin-top: 100px;
+            }
+            .clear {
+                clear: both;
+            }
+            .box {
+                width: 100px;
+                height: 100px;
+                background-color: teal;
+                margin: 20px;
+                float: left;
+            }
+            .large-box {
+                width: 300px;
+            }
+            .no-margin {
+                margin-left: 0;
+                margin-right: 0;
+            }
+            #middle-large {
+                width: 340px;
+            }
+            #boxes-cont {
+                width: 620px;
+                margin: auto;
+            }
+            .center {
+                text-align: center;
+            }
+            .large-font{
+                font-size: 24;
+            }
+            .campus-box {
+                float: left;
+                width: 350px;
+                margin: 25px;
+            }
+            .image-box {
+                background-color: gray;
+                border: 1px solidblack;
+                padding : 10px;
+                text-align: center;
+
+            }
+            #masai-cont {
+                width: 1200px;
+                margin: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="bars-cont">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <hr class="clear" />
+        <div id="boxes-cont">
+            <div class="box"></div>
+            <div class="box large-box"></div>
+            <div class="box"></div>
+            <div class="box clear large-box" id="middle-large"></div>
+            <div class="box no-margin"></div>
+            <div class="box"></div>
+            <div class="box clear"></div>
+            <div class="box"></div>
+            <div class="box large-box"></div>
+        </div>
+        <hr class="clear" />
+        <div id="masai-cont">
+            <h1 class="center">Masai School Campus</h1>
+            <p class="center large-font"> Our main campus is located in Koramangala, Heart of Bangalore which is well connected to every part of the city.</p>
+            <p class="center large-font">Our Patna Campus is located at Kankarbagh Main Road. The reason for choosing co-working spcae over any other classroom is very simple - there is no better place to learn coding than being in the environment of 50+ tech teams of various companies.</p>
+            <div id="campus-cont">
+                <div class="campus-box">
+                    <div class="image-box">
+                        <img src = https://www.masaischool.com/static/campus/location_1/91springboard_min_1.jpg />
+                    </div>
+                    <p class="center large-font">91 Springboard</p>
+                </div>
+                <div class="campus-box">
+                    <div class="image-box">
+                        <img src = https://www.masaischool.com/static/campus/location_2/bhive_min_2.jpg />
+                    </div>
+                    <p class="center large-font">BHIVE, Bangalore</p>
+                </div>
+                <div class="campus-box">
+                    <div class="image-box">
+                        <img src = https://www.masaischool.com/static/campus/location_3/workstudio_min_2.jpg />
+                    </div>
+                    <p class="center large-font">Work Studio, Patna</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

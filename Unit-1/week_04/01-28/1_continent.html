@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <select id = "continent_select">
+            <option value = "The Continent is Asia"> India </option>
+            <option value = "The Continent is North America"> United Sates of America </option>
+            <option value = "The Continent is Asia"> China </option>
+            <option value = "The Continent is Asia"> Nepal </option>
+            <option value = "The Continent is Australia"> Australia </option>
+            <option value = "The Continent is Europe"> France </option>
+            <option value = "The Continent is Europe"> Germany </option>
+            <option value = "The Continent is Africa"> South Africa </option>
+            <option value = "The Continent is Africa"> Nigeria </option>
+            <option value = "The Continent is North America"> Mexico </option>
+            <option value = "The Continent is South America"> Argentina </option>
+            <option value = "The Continent is South America"> Brazil </option>
+            <option value = "The Continent is North America"> Canada </option>
+            <option value = "The Continent is Asia"> Singapore </option>
+            <option value = "The Continent is Europe"> Sweden </option>
+        </select>
+        <button onclick="continent()">Find Continent</button>
+        <script>
+            function continent(){
+                alert(document.getElementById("continent_select").value);
+            }
+        </script>
+    </body>
+</html>

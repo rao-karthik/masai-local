@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/CSS">
+        .long-box {
+            width: 900px;
+            height: 60px;
+            margin: 20px;
+            float: left;
+            background-color: red;
+        }
+        .left-box {
+            width: 250px;
+            height: 500px;
+            margin: 20px;
+            float: left;
+            background-color: lawngreen
+        }
+        .right-box {
+            width: 610px;
+            height: 500px;
+            margin: 20px;
+            float: left;
+            background-color: teal
+        }
+        .clear {
+            clear: both;
+        }
+        #bar-box {
+            width: 940px;
+            margin: auto;
+        }
+        .box-size {
+            width: 200px;
+            height: 200px;
+            float: left;
+            margin: 10px;
+            background-color: teal;
+        }
+        #boxes-cont {
+            width: 880px;
+            margin: auto;
+        }
+        .box1 {
+            width: 500px;
+            margin: auto;
+        }
+        .box2 {
+            width: 500px;
+            height: 350px;
+            background-color: lightgrey;
+            float: left;
+            margin: auto;
+        }
+        .image-size {
+            width: 130px;
+            height: 180px;
+            float: left;
+            margin-top: 10px;
+            margin-right: 185px;
+        }
+        .image-box {
+            width: 130px;
+            margin: auto;
+            padding: 10px;
+        }
+        .gap {
+            padding-top: 180px;
+        }
+        .heading1 {
+            color: blue;
+            text-align: center;
+        }
+        .large-font {
+            font-size: 28px;
+            text-align: center;
+        }
+        .box3 {
+            width: 775px;
+            height: 220px;
+            float: left;
+            margin-left: 413px;
+        }
+        .image-box2 {
+            width: 130px;
+            margin-top: 10px;
+            padding: 10px;
+            float: left;
+        }
+        .heading2 {
+            color: red;
+        }
+        .box4 {
+            float: left;
+            margin-left: 20px;
+            width: 600px;
+        }
+        .box5 {
+            width: 1600px;
+            background-color: rgb(201, 68, 6);
+            height: 250px;
+            margin-top: 20px;
+            padding-top: 20px;
+        }
+        .box6 {
+            float: left;
+            width: 500px;
+            margin-top: 20px;
+            margin-left: 40px;
+        }
+        .heading3 {
+            font-size: 35px;
+            color: white;
+        }
+        .large-font1 {
+            font-size: 20px;
+        }
+        .box7 {
+            float: right;
+            width: 500px;
+            margin-top: 20px;
+            margin-right: 40px;;
+        }
+        .align-right {
+            text-align: right;
+        }
+        .box8 {
+            background-color: black;
+            height: 210px;
+            width: 10px;
+            margin: 20px auto;
+        }
+        #unix {
+            width: 1600px;
+            margin: auto;
+        }
+        </style>
+    </head>
+    <body>
+        <div id="bar-box">
+            <div class="long-box"></div>
+            <div class="clear"></div>
+            <div class="left-box"></div>
+            <div class="right-box"></div>
+        </div>
+        <hr class="clear" />
+        <div id="boxes-cont">
+            <div class="box-size"></div>
+            <div class="box-size clear"></div>
+            <div class="box-size"></div>
+            <div class="box-size clear"></div>
+            <div class="box-size"></div>
+            <div class="box-size"></div>
+            <div class="box-size clear"></div>
+            <div class="box-size"></div>
+            <div class="box-size"></div>
+            <div class="box-size"></div>
+        </div>
+        <hr class="clear" />
+        <div id="unix">
+            <div class="box1">
+                <div class="box2">
+                    <div class="image-box">
+                        <img src = https://masai-course.s3.ap-south-1.amazonaws.com/resources/images/linus.jpg class="image-size"/>
+                    </div>
+                    <div class="gap">
+                        <h1 class="heading1">Linus Torvalds</h1>
+                    <p class="large-font">The creator of Linux & Git</p>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="box3">
+                <div class="image-box2">
+                    <img src = "https://masai-course.s3.ap-south-1.amazonaws.com/resources/images/khan.jpg" class="image-size" />
+                </div>
+                <div class="box4">
+                    <h1 class="heading2">Sal Khan</h1>
+                    <p>Salman Khan is the founder of the Khan Academy which has a mission od providing a free world-class education for anyone, anywhere.</p>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="box5">
+                <div class="box6">
+                    <p class="heading3">Ken Thompson</p>
+                    <p class="large-font1"> Designed and Implemented the original Unix Operation System</p>
+                </div>
+                <div class="box7">
+                    <p class="heading3 align-right">Dennis Ritchie</p>
+                    <p class="large-font1 align-right"> The creator of C Programming Language</p>
+                </div>
+                <div class="box8"></div>
+            </div>
+        </div>
+    </body>
+</html>
