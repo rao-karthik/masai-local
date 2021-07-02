@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="getData()">Get Data</button>
+    <div id="data"></div>
+    <script>
+        function getData(){
+        var xhr = new XMLHttpRequest(); // step 1
+
+        xhr.open('GET', 'https://reqres.in/api/users?page=2'); //step 2
+        
+        xhr.send()// step 3
+
+        xhr.onload = function(){}
+
+        // xhr.onload(){
+        //     console.log(xhr.response);
+        // }istening to reponse
+
+        xhr.addEventListener('load', function(){
+            console.log(xhr); // line 11 & line 6 do same thing
+
+            var received = xhr.response;
+            received = JSON.parse(received);
+            var arr = received.data;
+            console.log(arr);
+
+            for(var i = 0; i < arr.length; i++){
+                var dataDiv = document.getElementById("data");
+                var element = document.createElement('p');
+                element.innerHTML = arr[i].email + arr[i].first_name + arr[i].last_name + arr[i].avatar;
+
+                dataDiv.append(element);
+            }
+
+            // document.getElementById('data').innerHTML = received;
+        });
+    }
+
+    </script>
+</body>
+</html>

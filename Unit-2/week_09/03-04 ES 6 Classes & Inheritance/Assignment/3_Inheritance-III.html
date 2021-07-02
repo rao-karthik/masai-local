@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class person {
+            constructor(name, age){
+                this.name = name;
+                this.age = age;
+            }
+
+            mobile(number){
+                this.number = number;
+                console.log(this.name, this.age, this.number)
+            }
+        }
+
+        var kartik = new person("Kartik", 26);
+        console.log(kartik)
+        kartik.mobile(8607050509)
+
+        class houseArea extends person{
+            constructor(name, age, length, width){
+                super(name, age)
+                this.length = length;
+                this.width = width;
+            }
+
+            area(){
+                this.area = this.length * this.width;
+                return this.area;
+            }
+
+            volume(height){
+                // let ar = area()
+                this.volume = this.length* this.width * height
+                console.log(this.volume);
+            }
+        }
+
+        var details = new houseArea("Kartik", 26, 15, 15);
+        console.log(details);
+
+        console.log(details.area());
+
+        details.volume(15)
+
+        class placeVisited extends houseArea{
+            constructor(name, age, length, breadth, place, famousFor){
+                super(name, age, length, breadth);
+                this.place = place;
+                this.famousFor = famousFor;
+            }
+
+            get placeV(){
+                console.log(this.name, this.age, this.place, this.famousFor);
+            }
+
+            set placeV(newPlace){
+                this.place = newPlace;
+            }
+
+            set placeV(nFamous){
+                this.famousFor = nFamous;
+            }
+        }
+
+        var allDetails = new placeVisited("Kartik", 26, 15, 15, "Paris", "Eiffel Tower");
+        console.log(allDetails);
+
+        allDetails.placeV;
+        
+        allDetails.placeV = "Jammu";
+        allDetails.placeV = "Hills";
+        
+        allDetails.placeV;
+
+    </script>
+</body>
+</html>

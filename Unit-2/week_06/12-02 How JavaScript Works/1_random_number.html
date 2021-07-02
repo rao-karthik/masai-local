@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style type="text/CSS">
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html, body{
+            height: 100%;
+            width: 100%;
+            /* background-color: brown; */
+        }
+        #box {
+            /* background-color: blue; */
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        img {
+            width: 25rem;
+            height: 15rem;
+        }
+        #cat{
+            display: none;
+        }
+
+        #dog{
+            display: none;
+        }
+        </style>
+    </head>
+    <body>
+        <button id="btn">Click Me</button>
+        <div id="box">
+            <img src="https://image.shutterstock.com/image-photo/cat-medical-mask-protective-antiviral-600w-1684423789.jpg" id="cat">
+            <img src="https://i.guim.co.uk/img/media/fe1e34da640c5c56ed16f76ce6f994fa9343d09d/0_174_3408_2046/master/3408.jpg?width=445&quality=45&auto=format&fit=max&dpr=2&s=c4f4d4981ad8e828c7d2402a47ed4f4f" id="dog">
+        </div>
+        <script>
+            var body = document.querySelector("body")
+            var btn = document.getElementById("btn");
+            // var cat = document.getElementById("cat");
+            // var dog = document.getElementById("dog");
+
+            btn.addEventListener('click', randomVis)
+            function randomVis(){
+                var random = Math.floor(Math.random()*101);
+                console.log(random)
+                if (random % 3 == 0 && random % 5 == 0){
+                    cat.style.display = "inline-block";
+                    dog.style.display = "inline-block";
+                    body.style.backgroundColor = "white";
+                }
+                else if (random % 3 == 0){
+                    cat.style.display = "inline-block";
+                    body.style.backgroundColor = "white";
+                }
+                else if (random % 5 == 0){
+                    dog.style.display = "inline-block";
+                    body.style.backgroundColor = "white";
+                }
+                else {
+                    body.style.backgroundColor = "red";
+                    cat.style.display = "none";
+                    dog.style.display = "none";
+                }
+            }
+        </script>
+    </body>
+</html>

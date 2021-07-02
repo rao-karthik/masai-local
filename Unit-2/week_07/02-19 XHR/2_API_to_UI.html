@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <select id="requests">
+            <option value="https://reqres.in/api/users/1">1</option>
+            <option value="https://reqres.in/api/users/2">2</option>
+            <option value="https://reqres.in/api/users/3">3</option>
+            <option value="https://reqres.in/api/users/4">4</option>
+        </select>
+        <button>Submit</button>
+        <div id="data"></div>
+        <script>
+            function getData(){
+                var xhr = new XMLHttpRequest();
+
+                var value = document.getElementById("requests").value;
+                // console.log(value)
+                xhr.open('GET', value);
+
+                xhr.send();
+                
+                xhr.onload = function(){
+                    var received = xhr.response;
+                    console.log(received);
+                    var Data = JSON.parse(received);
+                    console.log(Data);
+
+                    var dataDiv = document.getElementById("data");
+                    var element = document.createElement('p');
+                    element.innerHTML = Data.data.email + " | " +Data.data.first_name + " " + Data.data.last_name + " | " + Data.data.avatar;
+
+                    dataDiv.append(element);
+                }
+            }
+            var btn = document.querySelector("button");
+            btn.addEventListener("click", getData);
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <input type="text" id="input"/>
+        <select id="selectMaths">
+            <option value="floor" id="floor">Floor</option>
+            <option value="round" id="round">Round</option>
+            <option value="ceil" id="ceil">Ceil</option>
+        </select>
+        <button id="btn">Check</button>
+        <div id="output"></div>
+        <script>
+            var input = document.getElementById("input");
+            var btn = document.getElementById("btn");
+            var sel = document.getElementById("selectMaths");
+            var output = document.getElementById("output");
+
+            function mathFloor(input){
+                var fl = Math.floor(input);
+                if (isNaN(fl)){
+                    output.innerHTML = "error";
+                    return output;
+                }
+                else {
+                    output.innerHTML = fl;
+                }
+            }
+
+            function mathRound(input){
+                var rd = Math.round(input);
+                if (isNaN(rd)){
+                    output.innerHTML = "error";
+                }
+                else {
+                    output.innerHTML = rd;
+                }
+            }
+
+            function mathCeil(input){
+                var cl = Math.ceil(input);
+                if (isNaN(cl)){
+                    output.innerHTML = "error";
+                }
+                else {
+                    output.innerHTML = cl;
+                }
+            }
+
+            btn.addEventListener("click", function Submit(){
+                if(sel.value == 'floor'){
+                    mathFloor(input.value);
+                }
+                if(sel.value == 'round'){
+                    mathRound(input.value);
+                }
+                if(sel.value == 'ceil'){
+                    mathCeil(input.value);
+                }
+            });
+        </script>
+    </body>
+</html>

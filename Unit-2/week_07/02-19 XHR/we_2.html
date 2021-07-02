@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="inputId">
+    <button onclick="getData()">Get Data</button>
+    <div id="data"></div>
+    <script>
+        function getData(){
+        var xhr = new XMLHttpRequest(); // step 1
+        
+        var value = document.getElementById("inputId").value;
+        // console.log(value)
+        
+        var url = 'https://reqres.in/api/users/' + value;
+        // console.log(url);
+
+        // xhr.open('GET', 'https://reqres.in/api/users/2'); //step 2
+        xhr.open('GET', url); //step 2
+        
+        xhr.send()// step 3
+
+        xhr.onload = function(){}
+
+        // xhr.onload(){
+        //     console.log(xhr.response);
+        // }istening to reponse
+
+        xhr.addEventListener('load', function(){
+            // console.log(xhr); // line 11 & line 6 do same thing
+
+            var received = xhr.response;
+            // console.log(received);
+            var arr = JSON.parse(received);
+            // console.log(arr);
+
+            var dataDiv = document.getElementById("data");
+            var element = document.createElement('p');
+            element.innerHTML = arr.data.email + " | " +arr.data.first_name + " " + arr.data.last_name + " | " + arr.data.avatar;
+
+            dataDiv.append(element);
+
+            // document.getElementById('data').innerHTML = received;
+        });
+    }
+
+    </script>
+</body>
+</html>

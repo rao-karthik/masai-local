@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style type="text/CSS">
+        #timer {
+            position: absolute;
+            right: 10px;
+            font-size: 25px ;
+        }
+        </style>
+    </head>
+    <body>
+        <div id="timer">60</div>
+        <div>
+            <form>
+                <label for="cardNum">Enter Card Number</label>
+                <input type="number" id="cardNum"><br></br>
+                <label for="CVV">Enter CVV</label>
+                <input type="number" id="CVV"><br></br>
+                <label for="name">Full Name</label>
+                <input type="text" id="name"><br></br>
+                <label for="address">Address</label>
+                <input type="text" id="address"><br></br>
+                <label for="otp">Enter OTP</label>
+                <input type="number" id="otp"><br></br>
+                <button>Make Payment</button>
+            </form>
+        </div>
+        <script>
+            window.onload = function(){
+                var form = document.querySelector("form");
+                var btn = document.querySelector("button");
+                form.addEventListener("click", makePayment);
+                counter = setInterval(function(){
+                    timer--;
+                    count++;
+                    timerDiv.innerHTML = timer;
+                }, 1000)
+            }
+            var counter;
+            var timer = 60;
+            var count = 0;
+            var timerDiv = document.getElementById("timer");
+
+            var getForm = document.querySelector("form");
+            var cardNum = document.getElementById("cardNum");
+            var CVV = document.getElementById("CVV");
+            var CHname = document.getElementById("name");
+            var address = document.getElementById("address");
+            var otp = document.getElementById("otp");
+            var arr;
+            function makePayment(event){
+                event.preventDefault();
+                arr = [];
+                
+                if(count < 10){
+                    var details = {
+                        cardNumber : cardNum.value,
+                        otp : otp.value,
+                        cvv : CVV.value,
+                        name : CHname.value,
+                        address : address.value
+                    }
+                    
+                    arr.push(details)
+                    console.log(arr)
+
+                    arr = JSON.stringify(arr)
+                    localStorage.setItem("Card Details", arr)
+                    setTimeout(function(){
+                        clearInterval(counter)
+                    })
+                }
+                if(count > 10) {
+                    alert("Sorry! Your session has expired")
+                    setTimeout(function(){
+                        clearInterval(counter)
+                        getForm.style.display = "none"
+                    })
+                }
+            }
+            </script>
+    </body>
+</html>

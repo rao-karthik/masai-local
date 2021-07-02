@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <button id="increase">Increase</button>
+        <button id="decrease">Decrease</button>
+        <h1></h1>
+    </body>
+    <script>
+        var heading = document.querySelector("h1");
+        var increase = document.getElementById("increase");
+        var decrease = document.getElementById("decrease");
+        window.onload =  function (){
+            var count = localStorage.getItem("counter");
+            count = JSON.parse(count);
+            if(counter != null){
+                counter = count;
+            }
+            else {
+                counter = 0;
+            }
+        }
+        var counter;
+        var count = localStorage.getItem("counter");
+        heading.innerHTML = count;
+        increase.addEventListener("click", function inc(click){
+            if("click"){
+                count++
+            }
+            heading.innerHTML = count
+            localStorage.setItem("counter", JSON.stringify(heading.innerHTML));
+        })
+        decrease.addEventListener("click", function inc(click){
+            if("click"){
+                count--
+            }
+            heading.innerHTML = count
+            localStorage.setItem("counter", JSON.stringify(heading.innerHTML));
+        })
+    </script>
+</html>

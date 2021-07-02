@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <input type="text" id="input1" />
+        <input type="text" id="input2" />
+        <button id="btn">Submit</button>
+        <div id="output"></div>
+        <script>
+            var output = document.getElementById("output");
+            var btn = document.getElementById("btn");
+
+            btn.addEventListener('click', function isSubstring(){
+                var input1 = document.getElementById("input1");
+                var input2 = document.getElementById("input2");
+                var position = input1.value.indexOf(input2.value)
+                if (position != -1){
+                    output.innerHTML= "true";
+                } else {
+                    output.innerHTML= "false";
+                }
+                input1.value = "";
+                input2.value = "";
+            });
+        </script>
+    </body>
+</html>

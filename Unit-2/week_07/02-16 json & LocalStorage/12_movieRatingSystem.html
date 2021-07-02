@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <select id="movies">
+            <option value="Sholey">Sholey</option>
+            <option value="DDLJ">DDLJ</option>
+            <option value="Thor">Thor</option>
+            <option value="Avengers">Avengers</option>
+            <option value="Spiderman">Spiderman</option>
+            <option value="Batman">Batman</option>
+            <option value="Superman">Superman</option>
+            <option value="MIB">MIB</option>
+            <option value="Hera Pheri">Hera Pheri</option>
+            <option value="Justice League">Justice League</option>
+        </select>
+        <input type="number" placeholder="ratings out of 5">
+        <input placeholder="feedback" />
+        <div>
+            <label>Will Rewatch</label>
+            <input name="rewatch" type="checkbox">
+            <label>Will Not Rewatch</label>
+            <input name="rewatch" type="checkbox">
+        </div>
+        <button>Submit</button>
+        <table></table>
+        <script>
+            var movie = document.getElementById("movies");
+            var input = document.querySelectorAll("input");
+            var btn = document.querySelector("button");
+            var tab = document.querySelector("table");
+            
+            window.addEventListener("load", function(){
+                var dataArr= localStorage.getItem("rating");
+                dataArr= JSON.parse(dataArr);
+                if(rating != null){
+                    rating = dataArr;
+                }
+                else {
+                    rating = {};
+                }
+            })
+            var rating;
+                var dataArr = [];
+                btn.addEventListener("click", function(){
+                    objMov = {
+                        movieName: movie.value,
+                        ratings: input[0].value,
+                        feedback: input[1].value,
+                        willRewatch: input[2].checked,
+                        willNotReatch: input[3].checked
+                    }
+
+                    dataArr.push(objMov);
+
+                    localStorage.setItem("rating", JSON.stringify(dataArr))
+                    console.log(objMov);
+                    console.log(input[2].checked)
+                    console.log(input[3].checked)
+
+                    var tr = document.createElement("tr");
+                    var mov = document.createElement("td");
+                    var rat = document.createElement("td");
+                    var feed = document.createElement("td");
+                    var wat = document.createElement("td");
+                    var nwat = document.createElement("td");
+
+                    mov.innerHTML = movie.value;
+                    rat.innerHTML = input[0].value;
+                    feed.innerHTML = input[1].value;
+                    wat.innerHTML = input[2].checked;
+                    nwat.innerHTML = input[3].checked;
+                    
+                    tr.append(mov, rat, feed, wat, nwat);
+                    tab.append(tr);
+
+                })
+        </script>
+    </body>
+</html>

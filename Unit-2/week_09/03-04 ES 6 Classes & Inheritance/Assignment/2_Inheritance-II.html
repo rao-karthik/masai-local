@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function area(length, width){
+            this.length = length;
+            this.width = width;
+        }
+
+        area.prototype.showArea = function() {
+            this.area = this.length * this.width;
+            console.log(this.area);            
+        }
+
+        var square = new area(26, 26);
+        square.showArea();
+
+    </script>
+</body>
+</html>

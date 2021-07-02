@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="getData()">Get Data</button>
+    <div id="data"></div>
+    <script>
+        function getData(){
+        var xhr = new XMLHttpRequest(); // step 1
+
+        xhr.open("POST", "https://reqres.in/api/users");
+
+        // post- passing new value
+        // put- updating existing value
+        
+        var body = {
+                "name": "morpheus",
+                "job": "leader"
+        }
+        
+        body = JSON.stringify(body);
+
+        xhr.setRequestHeader('Content-Type','application/json;charset-utf-8')
+
+        xhr.send()// step 
+
+        xhr.addEventListener('load', function(){
+            console.log(xhr.response)
+        })
+
+        // onload - response received
+        // xhr.onerror - if you just can't make the request;
+        // xhr.onprogress - 
+    }
+
+    </script>
+</body>
+</html>
