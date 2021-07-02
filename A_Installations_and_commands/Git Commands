@@ -1,0 +1,3 @@
+/* For using multiple accounts on single pc */
+    set credential to true  : git config --global credential.useHttpPath true
+    open .gitConfig         : git config --global -e

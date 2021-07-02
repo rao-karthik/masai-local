@@ -1,0 +1,13 @@
+npm install create-react-app -g   (to install react app globally)
+
+create new ract app:-{
+    create-react-app "app name without quotes"
+}
+
+related apps:
+      i. npm
+     ii. yarn
+    iii. pnpm
+     iv. uuid
+
+Change Port: "start": "set PORT=3006 && react-scripts start"

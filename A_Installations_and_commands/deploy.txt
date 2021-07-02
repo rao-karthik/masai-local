@@ -1,0 +1,71 @@
+<= Heroku =>
+
+
+1) npm install -g create-react-app
+
+2) create-react-app my-app
+
+3) cd my-app
+
+4) git init
+
+6) heroku create -b https://github.com/mars/create-react-app-buildpack.git
+
+7) git add .
+
+8) git commit -m "react-create-app on Heroku"
+
+9) git push heroku master
+
+10) heroku open
+
+
+
+
+<= Vercel =>
+
+
+1) install now globlaly npm i -g vercel
+
+2) move inside your react app folder (make sure you are on the entry folder package.json etc is located.
+
+3) run the command vercel from terminal
+
+4) If not logged in, or if no account created you might be asked to. once login and authentication is setup, the terminal will ask you a few questions to setup and deploy.
+
+5) Once that is over, it will show its ready and gives you a production link
+
+6) If you want to deploy it to a production build, then do vercel --prod
+
+
+
+
+<= Netlify => 
+
+
+1) First go to https://www.netlify.com/ and create an account using Github.
+
+2) Install the netlify CLI(command line interface) using npm install netlify-cli -g.
+
+3) In your package.json add a field name with value ("homepage": ".")
+
+4) Next go to your React App folder in the command line and run the command npm run build. This will do all the work necessary to have your app ready for deployment. (If you are not able to get routes working, sometimes its due to BrowserRouter, you can use HashRouter, this works fine when deploying to netlify)
+        i) If you have react-router-dom installed, then you need to do an additional step of setting redirects on netlify
+       ii) In your build folder, create _redirects file.
+      iii) Add the following to the _redirects file (/* /index.html 200)
+
+5) Now type netlify deploy and visit the link it provides to verify your account.
+
+6) Once you are done verifying, it should give you some options, select + Create & configure a new site .
+
+7) Select a team, this would usually be the same as your Netlify-ID.
+
+8) Then give your website some unique name.
+
+9) In the deploy folder option type build.
+
+10) Your draft should be live on the Live Draft URL:. Visit the link and make sure your application is working correctly.
+
+11) If you application is working, type netlify deploy --prod to deploy the application. The deploy path should be build.
+
+12) Visit the live URL to see your website live on the Internet for anyone to visit. You will have to run the deploy process everytime to see changes to your website. For more information about automating deployments, do read up about CI/CD integration. Read more (https://dev.to/curtiscodes/ci-cd-pipeline-with-netlify-and-github-actions-bcm)

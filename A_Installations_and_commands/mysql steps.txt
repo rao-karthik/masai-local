@@ -1,0 +1,27 @@
+CRUD:
+    C: create   => insert
+    R: read     => select
+    U: update   => update
+    D: delete   => delete
+
+download link                   : "https://dev.mysql.com/downloads/mysql/"
+download tablePlus              : "https://tableplus.com/download"
+check version                   : "mysql --version"
+to use mysql from commandLine   : "mysql -u root -p"
+to check all databases          : show databases
+delete databases                : drop database database_name
+create new database             : create database database_name
+to use db for creating tables   : use database_name
+
+to create tables                : create table table_name (id int auto_increment primary key, first_name varchar(50) not null, last_name varchar(50), birthDate date)
+to check table                  : describe table_name
+deleting table                  : drop table table_name
+
+insert into table_name (first_name, last_name, birthDate) valuse('Kartik', 'Yadav', '1994')
+select id, first_name from persons where id = 1;
+update table_name set first_name = 'K' where id = 1;
+
+
+
+/* link sql to api */
+    use "Sequelize ORM"

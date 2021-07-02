@@ -1,0 +1,85 @@
+/* For Project */
+    axios                       : npm i axios
+    redux                       : npm i redux
+    react-redux                 : npm i react-redux
+    redux-thunk                 : npm i redux-thunk
+    styled-components           : npm i --save styled-components
+    react-router-dom            : npm i react-router-dom
+    uuid                        : npm i uuid
+    mat-ui                      : npm i @material-ui/core
+    mat-ui-icons                : npm i @material-ui/icons
+    mat-ui-x-grid               : npm i @material-ui/x-grid
+    mat-ui-library              : npm i @material-ui/lab
+    mat-ui-data-grid            : npm i @material-ui/data-grid
+    react-swipable-views        : npm i react-swipeable-views
+    react-swipeable-views-utils : npm i react-swipeable-views-utils
+    ant-design                  : npm i antd
+    bootstrap                   : npm i bootstrap
+    nodemon                     : npm i -g nodemon
+    cypress                     : npm i cypress --save-dev
+    firebase                    : npm i firebase
+    firebase-cli                : npm i -g firebase-tools
+
+    express                     : npm i express
+    mongoose                    : npm i mongoose
+
+/* For typescript Project */
+    react-router-dom    : npm i --save-dev @types/react-router-dom
+    styled-components   : npm i --save-dev @types/styled-components
+    react-redux         : npm i --save-dev @types/react-redux
+    redux: thunk        : npm i --save-dev @types/redux-thunk
+    
+    express             : npm i --save-dev @types/express
+
+//* For testing *//
+    yarn add @testing-library/react react-test-renderer @testing-library/jest-dom @testing-library/user-event --save-dev
+
+/* Cypress.io */
+    npm install cypress --save-dev
+    in scripts add- [ "cypress": "cypress open" ]
+    if cypress not running: 
+                            "npx cypress install --force" or 
+                            "yarn run cypress install --force" or 
+                            "cypress cache clear && cypress install"
+
+/* Nodemon */
+    npm i -g nodemon
+    in scripts add- [ "server": "nodemon index.js" ]
+
+/* yargs */
+    npm i yargs
+
+/* express */
+    npm i express
+    in scripts add- [ "server": "nodemon filename" ]
+
+/* mysql on ubuntu */
+    sudo apt install mysql-server
+    sudo mysql_secure_installation
+    sudo mysql -u root (enter mysql console)
+
+/* Nodemailer */
+    npm i nodemailer
+    work with mailtrap
+    for sending email
+
+/* Passport js */
+
+/* Redis */
+    for caching
+    memcached is also used for caching
+    docker run --name my-redis -d redis -p 9200:9200
+
+    docker pull redis
+    docker run -d -p 6379:6379 --name productRedis redis
+    docker ps
+    docker logs productRedis
+    docker exec -it productRedis sh
+    redis-cli
+
+    /* Commands
+        redis-cli
+        KEYS *              : get all keys
+        DEL keyName         : for deleting key
+        GET keyname         : get values of key
+        SET keyName values  : setting value of a key

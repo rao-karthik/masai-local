@@ -1,0 +1,38 @@
+Install json Server:
+        npm install -g json-server
+
+Steps:
+
+      i. npm init
+
+     ii. npm install --save json-server (do it in the folder in which you want to make a server)
+
+    iii. create a .gitignore file and inside that enter "node_modules"
+
+     iv. create a database.json file
+
+      v. In pacakage.json- in scripts - write:  "start": "json-server --watch database.json"
+
+     vi. npm run start
+
+
+Deploy Mock server to heroku cli:
+
+install heroku: 
+        for ubuntu: sudo snap install heroku --classic
+
+- clone fake rest api in a new folder (https://github.com/nbkhope/fake-restful-api)
+
+- heroku login
+
+- heroku create "json-server-mocker-kartik" (without quotes)
+
+- add data to json filr
+
+-git push heroku master
+
+- heroku ps:scale web=1
+
+- heroku open
+
+kaffiene heroku - to stop going your heroku app to sleep
