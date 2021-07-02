@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button component Testing matches snapshot 1`] = `
+<button
+  data-testid="button-form"
+  style={
+    Object {
+      "backgroundColor": "green",
+    }
+  }
+>
+  snap
+</button>
+`;

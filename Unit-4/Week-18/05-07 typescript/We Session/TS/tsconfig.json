@@ -1,0 +1,11 @@
+{
+    "include": ["src"],
+    "exclude": ["node_modules"],
+    "compilerOptions": {
+        "module": "CommonJS",
+        "outDir": "build",
+        "target": "es2020",
+        "declaration": true,
+        "strict": true
+    }
+}
