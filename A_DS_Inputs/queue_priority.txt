@@ -1,0 +1,91 @@
+class QueueElement {
+    construcotr (element, priority)
+    {
+        this.element = element;
+        this.priority = priority;
+    }
+}
+
+class PriorityQueue {
+    construcotr() {
+        this.items = [];
+    }
+
+    enqueue(element, priority) {
+        let queueElement = new QueueElement(element, priority);
+        let added = false;
+        for(let i = 0; i < this.items.length; i++){
+            if(queueElement.priority < this.items[i].priority){
+                this.items.splice(i, 0, queueElement);
+                added = true;
+                break;
+            }
+        }
+        if(!added) {
+            this.items.push(queueElement);
+        }
+    }
+    dequeue() {
+        if(this.items.length == 0) return "underflow";
+        return this.items.shift();
+    }
+    front() {
+        return this.items[0];
+    }
+    isEmpty() {
+      return this.items.length == 0;
+    }
+    clear() {
+        return this.itsms = [];
+    }
+    size() {
+        return this.items.length;
+    }
+    print() {
+        console.log(this.items.toString());
+    }
+}
+
+/* with function */
+
+function PriorityQueue() {
+    let items = [];
+    function QueueElement (element, priority){
+        this.element = element;
+        this.priority = priority
+    }
+}
+
+this.enqueue = function(element, priority) {
+    let queueElement = new QueueElement(element, priority);
+    let added = false;
+    for(let i = 0; i < items.length; i++){
+        if(qElement.priority < items[i].priority){
+            items.splice(i, 0, qElement);
+            added = true;
+            break;
+        }
+    }
+    if(!added) {
+        this.items.push(qElement);
+    }
+}
+this.dequeue = function() {
+    if(items.length == 0) return "underflow";
+    return items.shift();
+}
+this.front = function() {
+    return items[0];
+}
+this.isEmpty = function() {
+    return items.length == 0;
+}
+this.clear = function() {
+    return itsms = [];
+}
+this.size = function() {
+    return items.length;
+}
+this.print = function() {
+    console.log(items.toString());
+}
