@@ -1,0 +1,36 @@
+.todoInput {
+    width: 400px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    left: -64px;
+}
+
+.todoInput > input {
+    height: 38px;
+    width: 250px;
+    padding-left: 30px;
+    font-size: 15px;
+    border: none;
+    background-color: #849576;
+    color: white;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+}
+
+.todoInput > button {
+    border: none;
+    outline: none;
+    height: 28px;
+    width: 28px;
+    position: relative;
+    left: 27px;
+    font-size: 15px;
+    background: transparent;
+}

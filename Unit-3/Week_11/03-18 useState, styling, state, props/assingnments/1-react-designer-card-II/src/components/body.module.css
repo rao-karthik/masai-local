@@ -1,0 +1,35 @@
+.bodyBox {
+    width: 1480px;
+    background-color: #f4f4f4;
+    margin: auto;
+    height: auto;
+    margin-bottom: 100px;
+}
+
+.contentBox {
+    width: 1300px;
+    background-color: white;
+    margin: auto;
+    position: relative;
+    top: -100px;
+    border-radius: 5px;
+}
+
+.contentBox > h1, .contentBox > p {
+    position: relative;
+    top: -95px;
+}
+
+.imgBox {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    position: relative;
+    top: -100px;
+}
+
+.imgBox > img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}

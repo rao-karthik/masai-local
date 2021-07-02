@@ -1,0 +1,33 @@
+.inputBox {
+    width: 500px;
+    height: 180px;
+    padding: 10px;
+    background-image: linear-gradient(to right top, #370513, #7a2922, #b55e20, #dca007, #e7eb12);
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow:
+        0 5px 80px rgba(0, 0, 0, 0.07);
+    color: white;
+}
+
+.inputBox input {
+    width: 200px;
+    height: 30px;
+    margin-right: 0;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.inputBox button {
+    width: 100px;
+    height: 33px;
+    margin-left: 0;
+    border: none;
+    outline: none;
+    background-color: grey;
+    cursor: pointer;
+    color: white;
+}

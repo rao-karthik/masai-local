@@ -1,0 +1,43 @@
+.list {
+    display: flex;
+    background-color: white;
+    width: 262px;
+    justify-content: space-between;
+    height: 38px;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.list > div {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    font-size: 20px;
+}
+
+.list > div > div {
+    margin-left: 10px;
+}
+
+.list > div input{
+    background: transparent;
+}
+
+.list > button {
+    width: 20px;
+    height: 20px;
+    font-size: 25px;
+    border-radius: 12.5px;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    top: -7px;
+}

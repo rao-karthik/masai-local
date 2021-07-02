@@ -1,0 +1,322 @@
+[
+    {
+        "name" : "Canteen Central",
+        "id" : 1,
+        "cuisine" : "North Indian, Fast Food, Deserts",
+        "costForTwo": 300,
+        "minOrder" : 50,
+        "deliveryTime" : 30,
+        "payment_methods" : {
+            "card" : false,
+            "cash" : true
+        },
+        "rating" : 4.0,
+        "votes" : 382,
+        "reviews" : 82,
+        "src" : "https://b.zmtcdn.com/data/pictures/8/19414058/624fd1d14f35262072c1c0cf1b30baed.jpg?output-format=webp&fit=around|771.75:416.25&crop=771.75:416.25;*,*"
+    },
+    {
+        "name" : "Chaayos - Meri Wali Chai",
+        "id" : 2,
+        "cuisine" : "Café - Cafe, Tea, Fast Food, Street Food, Desserts, Beverages",
+        "costForTwo": 400,
+        "minOrder" : 50,
+        "deliveryTime" : 30,
+        "payment_methods" : {
+            "card" : true,
+            "cash" : true
+        },
+        "rating" : 4.1,
+        "votes" : 202,
+        "reviews" : 100,
+        "src" : "https://b.zmtcdn.com/data/pictures/chains/9/300749/53251d7814de6b7b382174a4c60c388f.jpg?fit=around|771.75:416.25&crop=771.75:416.25;*,*"
+    },
+    {
+        "name" : "Domino's Pizza",
+        "id" : 3,
+        "cuisine" : "Pizza, Fast Food",
+        "costForTwo": 500,
+        "minOrder" : 50,
+        "deliveryTime" : 30,
+        "payment_methods" : {
+            "card" : true,
+            "cash" : true
+        },
+        "rating" : 4.0,
+        "votes" : 12800,
+        "reviews" : 1018,
+        "src" : "https://b.zmtcdn.com/data/pictures/3/143/7398da37ab73c4c7cb16ac860e577369.jpg?fit=around|771.75:416.25&crop=771.75:416.25;*,*"
+    },
+    {
+        "name" : "Khanani",
+        "id" : 4,
+        "cuisine" : "North Indian, Chinese, Momos, Beverages",
+        "costForTwo": 500,
+        "minOrder" : 50,
+        "deliveryTime" : 30,
+        "payment_methods" : {
+            "card" : true,
+            "cash" : false
+        },
+        "rating" : 3.5,
+        "votes" : 412,
+        "reviews" : 142,
+        "src" : "https://b.zmtcdn.com/data/pictures/chains/0/19319500/7ee2341a2bfac82d57e2d49b5bb71cde.jpeg?fit=around|300:273&crop=300:273;*,*"
+    },
+    {
+        "name" : "Railway Yard",
+        "id" : 5,
+        "cuisine" : "North Indian, Chinese, Mughlai, Fast Food, Beverages",
+        "costForTwo": 600,
+        "minOrder" : 50,
+        "deliveryTime" : 30,
+        "payment_methods" : {
+            "card" : true,
+            "cash" : false
+        },
+        "rating" : 4.0,
+        "votes" : 8367,
+        "reviews" : 2064,
+        "src" : "https://b.zmtcdn.com/data/pictures/0/18457090/30e43764ca315e9ae064c13f277ba114.jpg?fit=around|771.75:416.25&crop=771.75:416.25;*,*"
+    },
+    {
+        "name" : "The Mughal Trail",
+        "id" : 6,
+        "cuisine" : "North Indian, Mughlai, Biryani, Kebab, Rolls, Desserts, Beverages",
+        "costForTwo": 500,
+        "minOrder" : 50,
+        "deliveryTime" : 30,
+        "payment_methods" : {
+            "card" : true,
+            "cash" : true
+        },
+        "rating" : 3.9,
+        "votes" : 16500,
+        "reviews" : 1986,
+        "src" : "https://b.zmtcdn.com/data/pictures/chains/1/18597341/e2da2d662084b5b47b4b65bcf8bd2a26.jpg?fit=around|300:273&crop=300:273;*,*"
+    },
+    {
+        "name" : "The Good Bowl",
+        "id" : 7,
+        "cuisine" : "North Indian, Asian, Chinese, Pasta",
+        "costForTwo": 500,
+        "minOrder" : 50,
+        "deliveryTime" : 30,
+        "payment_methods" : {
+            "card" : false,
+            "cash" : true
+        },
+        "rating" : 3.9,
+        "votes" : 1442,
+        "reviews" : 101,
+        "src" : "https://b.zmtcdn.com/data/pictures/chains/6/18884536/83ffa65c9ab42eb239ab12020dfb8c38.jpg?fit=around|771.75:416.25&crop=771.75:416.25;*,*"
+    },
+    {
+        "name" : "Baskins Robbins",
+        "id" : 8,
+        "cuisine" : "Ice Cream, Desserts, Beverages",
+        "costForTwo": 400,
+        "minOrder" : 50,
+        "deliveryTime" : 30,
+        "payment_methods" : {
+            "card" : true,
+            "cash" : true
+        },
+        "rating" : 4.3,
+        "votes" : 152,
+        "reviews" : 37,
+        "src" : "https://b.zmtcdn.com/data/pictures/8/19414058/624fd1d14f35262072c1c0cf1b30baed.jpg?output-format=webp&fit=around|771.75:416.25&crop=771.75:416.25;*,*"
+    },
+    {
+        "name" : "Pirates of Punjab",
+        "id" : 9,
+        "cuisine" : "North Indian, Fast Food, Momos, Sandwich, Burger",
+        "costForTwo": 650,
+        "minOrder" : 50,
+        "deliveryTime" : 30,
+        "payment_methods" : {
+            "card" : false,
+            "cash" : true
+        },
+        "rating" : 3.9,
+        "votes" : 2040,
+        "reviews" : 243,
+        "src" : "https://b.zmtcdn.com/data/pictures/8/18729378/cd0b68ebf1f190cebd3a1efd1e8008e5.jpg?fit=around|771.75:416.25&crop=771.75:416.25;*,*"
+    },
+    {
+        "name" : "Jack & Jose",
+        "id" : 10,
+        "cuisine" : "Momos, Chinense, Continental, Sandwich, Burger",
+        "costForTwo": 500,
+        "minOrder" : 50,
+        "deliveryTime" : 30,
+        "payment_methods" : {
+            "card" : false,
+            "cash" : true
+        },
+        "rating" : 3.4,
+        "votes" : 884,
+        "reviews" : 169,
+        "src" : "https://b.zmtcdn.com/data/pictures/6/19217796/1e3c2942e6c51dc57f7835427fe68108.jpg?fit=around|771.75:416.25&crop=771.75:416.25;*,*"
+    },
+    {
+        "name" : "The House of Cakes",
+        "id" : 11,
+        "cuisine" : "North Indian, Fast Food, Deserts",
+        "costForTwo": 150,
+        "minOrder" : 50,
+        "deliveryTime" : 30,
+        "payment_methods" : {
+            "card" : false,
+            "cash" : true
+        },
+        "rating" : 3.7,
+        "votes" : 1026,
+        "reviews" : 234,
+        "src" : "https://b.zmtcdn.com/data/pictures/chains/5/18537375/9267e77af101717db4eb13ea1cb7eb25_featured_v2.jpg?fit=around|771.75:416.25&crop=771.75:416.25;*,*"
+    },
+    {
+        "name" : "Burger Week",
+        "id" : 12,
+        "cuisine" : "Fast Food, Burger, Beverages",
+        "costForTwo": 150,
+        "minOrder" : 50,
+        "deliveryTime" : 30,
+        "payment_methods" : {
+            "card" : false,
+            "cash" : true
+        },
+        "rating" : 3.9,
+        "votes" : 35,
+        "reviews" : 38,
+        "src" : "https://b.zmtcdn.com/data/pictures/1/19597331/66de2406586c71ca1b2a20d3e935a368.jpg?fit=around|300:273&crop=300:273;*,*"
+    },
+    {
+        "name" : "Mirchapur",
+        "id" : 13,
+        "cuisine" : "North Indian, Fast Food, Deserts",
+        "costForTwo": 500,
+        "minOrder" : 50,
+        "deliveryTime" : 30,
+        "payment_methods" : {
+            "card" : false,
+            "cash" : true
+        },
+        "rating" : 4.0,
+        "votes" : 365,
+        "reviews" : 174,
+        "src" : "https://b.zmtcdn.com/data/pictures/0/19518860/c88b8bb35866664416606465dc3c3a04.jpg?fit=around|771.75:416.25&crop=771.75:416.25;*,*"
+    },
+    {
+        "name" : "Canteen Central",
+        "id" : 14,
+        "cuisine" : "North Indian, Fast Food, Deserts",
+        "costForTwo": 300,
+        "minOrder" : 50,
+        "deliveryTime" : 30,
+        "payment_methods" : {
+            "card" : false,
+            "cash" : true
+        },
+        "rating" : 4.0,
+        "votes" : 300,
+        "reviews" : 450,
+        "src" : "https://b.zmtcdn.com/data/pictures/8/19414058/624fd1d14f35262072c1c0cf1b30baed.jpg?output-format=webp&fit=around|771.75:416.25&crop=771.75:416.25;*,*"
+    },
+    {
+        "name" : "Canteen Central",
+        "id" : 15,
+        "cuisine" : "North Indian, Fast Food, Deserts",
+        "costForTwo": 300,
+        "minOrder" : 50,
+        "deliveryTime" : 30,
+        "payment_methods" : {
+            "card" : false,
+            "cash" : true
+        },
+        "rating" : 4.0,
+        "votes" : 300,
+        "reviews" : 450,
+        "src" : "https://b.zmtcdn.com/data/pictures/8/19414058/624fd1d14f35262072c1c0cf1b30baed.jpg?output-format=webp&fit=around|771.75:416.25&crop=771.75:416.25;*,*"
+    },
+    {
+        "name" : "Canteen Central",
+        "id" : 16,
+        "cuisine" : "North Indian, Fast Food, Deserts",
+        "costForTwo": 300,
+        "minOrder" : 50,
+        "deliveryTime" : 30,
+        "payment_methods" : {
+            "card" : false,
+            "cash" : true
+        },
+        "rating" : 4.0,
+        "votes" : 300,
+        "reviews" : 450,
+        "src" : "https://b.zmtcdn.com/data/pictures/8/19414058/624fd1d14f35262072c1c0cf1b30baed.jpg?output-format=webp&fit=around|771.75:416.25&crop=771.75:416.25;*,*"
+    },
+    {
+        "name" : "Canteen Central",
+        "id" : 17,
+        "cuisine" : "North Indian, Fast Food, Deserts",
+        "costForTwo": 300,
+        "minOrder" : 50,
+        "deliveryTime" : 30,
+        "payment_methods" : {
+            "card" : false,
+            "cash" : true
+        },
+        "rating" : 4.0,
+        "votes" : 300,
+        "reviews" : 450,
+        "src" : "https://b.zmtcdn.com/data/pictures/8/19414058/624fd1d14f35262072c1c0cf1b30baed.jpg?output-format=webp&fit=around|771.75:416.25&crop=771.75:416.25;*,*"
+    },
+    {
+        "name" : "Canteen Central",
+        "id" : 18,
+        "cuisine" : "North Indian, Fast Food, Deserts",
+        "costForTwo": 300,
+        "minOrder" : 50,
+        "deliveryTime" : 30,
+        "payment_methods" : {
+            "card" : false,
+            "cash" : true
+        },
+        "rating" : 4.0,
+        "votes" : 300,
+        "reviews" : 450,
+        "src" : "https://b.zmtcdn.com/data/pictures/8/19414058/624fd1d14f35262072c1c0cf1b30baed.jpg?output-format=webp&fit=around|771.75:416.25&crop=771.75:416.25;*,*"
+    },
+    {
+        "name" : "Canteen Central",
+        "id" : 19,
+        "cuisine" : "North Indian, Fast Food, Deserts",
+        "costForTwo": 300,
+        "minOrder" : 50,
+        "deliveryTime" : 30,
+        "payment_methods" : {
+            "card" : false,
+            "cash" : true
+        },
+        "rating" : 4.0,
+        "votes" : 300,
+        "reviews" : 450,
+        "src" : "https://b.zmtcdn.com/data/pictures/8/19414058/624fd1d14f35262072c1c0cf1b30baed.jpg?output-format=webp&fit=around|771.75:416.25&crop=771.75:416.25;*,*"
+    },
+    {
+        "name" : "Canteen Central",
+        "id" : 20,
+        "cuisine" : "North Indian, Fast Food, Deserts",
+        "costForTwo": 300,
+        "minOrder" : 50,
+        "deliveryTime" : 30,
+        "payment_methods" : {
+            "card" : false,
+            "cash" : true
+        },
+        "rating" : 4.0,
+        "votes" : 300,
+        "reviews" : 450,
+        "src" : "https://b.zmtcdn.com/data/pictures/8/19414058/624fd1d14f35262072c1c0cf1b30baed.jpg?output-format=webp&fit=around|771.75:416.25&crop=771.75:416.25;*,*"
+    }
+]

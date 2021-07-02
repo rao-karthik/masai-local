@@ -1,0 +1,37 @@
+.output {
+    display: flex;
+    width: 500px;
+    justify-content: space-between;
+    margin: auto;
+    padding: 0;
+    margin-top: 10px;
+    background-image: linear-gradient(to right top, #370513, #7a2922, #b55e20, #dca007, #e7eb12);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.output > div {
+    width: 180px;
+    text-align: left;
+    color: white;
+}
+
+.btnBox {
+    text-align: right;
+}
+
+.btnBox > button {
+    width: 79px;
+    margin-right: 5px;
+    height: 30px;
+    background-color: grey;
+    border-radius: 2px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+.btnBox > button:nth-child(2) {
+    margin-right: 0px;
+}

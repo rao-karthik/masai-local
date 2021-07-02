@@ -1,0 +1,22 @@
+.paginationBox {
+    width: 400px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.paginationBox p {
+    font-size: 22px;
+}
+
+.paginationBox button {
+    width: 100px;
+    height: 33px;
+    border: none;
+    outline: none;
+    background-color: grey;
+    cursor: pointer;
+    color: white;
+    margin: 20px;
+    margin-bottom: 0;
+}
