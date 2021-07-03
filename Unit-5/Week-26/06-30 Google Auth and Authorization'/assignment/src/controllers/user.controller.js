@@ -1,18 +1,11 @@
-const { Schema, model } = require('mongoose');
+const express = require('express');
+const router = express.Router();
 
-const userSchema = new Schema({
-    name: {
-        type: String,
-        required: true
-    },
-    email: {
-        type: String,
-        required: true
-    },
-    password: {
-        type: String,
-        required: true
-    }
+const User = require('../models/user.model');
+
+router.get('/', async (req, res)=>{
+    const users= await User.find().lean().exec();
+    res.status(200).json({ users });
 });
 
-module.exports = model('user', userSchema);
+module.exports = router;

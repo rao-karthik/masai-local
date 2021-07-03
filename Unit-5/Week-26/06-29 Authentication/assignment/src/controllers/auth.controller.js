@@ -1,62 +1,76 @@
-const User =  require('../models/user.model');
-const jwt = require('jsonwebtoken');
 require('dotenv').config();
-const validator = require('../middlewares/validator');
+const jwt = require('jsonwebtoken');
+const User = require('../models/user.model');
 
-const newToken = (user) => {
-    return jwt.sign({id: user._id}, process.env.JWT_SECRET_KEY)
+const newToken = (user)=>{
+    return jwt.sign({id:user._id}, process.env.JWT_SECRET_KEY);
 }
 
-const register = async (req, res) => {
+const register = async(req, res)=>{
+    let email = req.body.email;
     try {
-        // cheeck if the user already exists?
-        let user = await User.findOne({email: req.body.email}).lean().exec();
+        // check if email exits or not
 
-        // if yes then send 400 error
-        if (user) {
+        let user = await User.findOne({email}).lean().exec();
+
+        // if yes send error
+
+        if(user){
             return res.status(400).json({
-                status: 'failed', 
-                message: 'user already exists'
+                status: 'failed',
+                message: 'User with same email id already exists'
             });
         };
 
-        // if not then create a new user
+        // create user
+
         user = await User.create(req.body);
         const token = newToken(user);
 
-        res.status(201).json({token});
+        res.status(201).json({
+            token,
+            user
+        })
     }
     catch (err) {
         res.status(400).json({message: err.message});
     }
 };
 
-const signIn = async (req, res) => {
+const login = async (req, res)=>{
+    const email = req.body.email;
+    const password = req.body.password;
     try {
         // check if the user exists or not
-        const user = await User.findOne({ email: req.body.email }).exec();
 
-        // if user don't exist send 404 error
-        if (!user) {
-            return res.status(401).json({
-                status: 'failed',
-                message: 'Incorrect email or password'
-            });
-        };
+        let user = await User.findOne({email}).exec();
 
-        // if the user exists check password with password in database
+        // if not then send error
 
-        const match = user.checkPassword(req.body.password);
-
-        if(!match) {
+        if(!user) {
             return res.status(400).json({
                 status: 'failed',
                 message: 'Incorrect email or password'
             });
         };
 
+        // match Password
+
+        const match = await user.checkPassword(password);
+
+        // if password do not match then send error
+
+        if(!match) {
+            return res.status(400).json({
+                status: 'failed',
+                message: "Incorrect email or password"
+            })
+        }
+
+        // send token
+
         const token = newToken(user);
-        res.status(201).json({token})
+        return res.status(200).json({token});
     }
     catch (err) {
         res.status(400).json({message: err.message});
@@ -64,6 +78,6 @@ const signIn = async (req, res) => {
 };
 
 module.exports = {
-    signIn,
-    register
-};
+    register,
+    login
+}

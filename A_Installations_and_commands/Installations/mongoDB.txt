@@ -1,0 +1,39 @@
+download link   : "https://medium.com/@LondonAppBrewery/how-to-download-install-mongodb-on-windows-4ee4b3493514"
+
+/* steps */
+    > cd
+    > touch .bash_profile
+    > vim .bash_profile
+    > hit the I key on the keyboard to enter insert mode
+    > alias mongod="/c/Program\ files/MongoDB/Server/4.4/bin/mongod.exe"
+      alias mongo="/c/Program\ Files/MongoDB/Server/4.4/bin/mongo.exe"
+    > :wq!
+
+/* install mongoDB on Ubuntu */
+    1)  > wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add -
+        > sudo apt-get install gnupg
+        > wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add -
+
+    2)  > echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/4.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.4.list
+
+    3)  > sudo apt-get update
+
+    4)  > sudo apt-get install -y mongodb-org
+        > echo "mongodb-org hold" | sudo dpkg --set-selections
+          echo "mongodb-org-server hold" | sudo dpkg --set-selections
+          echo "mongodb-org-shell hold" | sudo dpkg --set-selections
+          echo "mongodb-org-mongos hold" | sudo dpkg --set-selections
+          echo "mongodb-org-tools hold" | sudo dpkg --set-selections
+
+/* Start MongoDb */
+    1)  sudo systemctl start mongod
+        sudo systemctl daemon-reload (if failed to start mongod.service: Unit mongod.service not found.)
+
+    2)  sudo systemctl status mongod
+        sudo systemctl enable mongod (optionally ensure that MongoDB will start following a system reboot)
+
+    3)  sudo systemctl stop mongod
+
+    4)  sudo systemctl restart mongod
+
+    5)  mongo

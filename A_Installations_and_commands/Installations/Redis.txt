@@ -1,0 +1,13 @@
+/* installation */
+    start using docker  :docker run --name my-redis -d redis -p 9200:9200
+    install redis       : https://github.com/microsoftarchive/redis/releases/download/win-3.2.100/Redis-x64-3.2.100.msi
+
+
+/* Linux */
+    > wget https://download.redis.io/releases/redis-6.2.4.tar.gz
+    > tar xzf redis-6.2.4.tar.gz
+    > cd redis-6.2.4
+    > make
+
+    > src/redis-server
+    > src/redis-cli
