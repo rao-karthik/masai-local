@@ -15,3 +15,11 @@
           Host github.com
             HostName github.com
             IdentityFile ~/.ssh/id_rsa
+
+    > ssh-keygen -f anyName_id_rsa
+                  or 
+      ssh-keygen -t rsa -C "anyEmail" -f "anyName_id_rsa"
+        > #Account2
+          Host github.com-anyName
+            HostName github.com
+            IdentityFile ~/.ssh/anyName_id_rsa
