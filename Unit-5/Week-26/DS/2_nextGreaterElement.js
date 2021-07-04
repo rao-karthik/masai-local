@@ -28,12 +28,28 @@ class Stack {
 }
 
 function runProgram(input){
-    input = input.trim().split(/[\r\n]+/); 
-    console.log(input)
+    input = input.trim().split(/[\r\n]+/);
+
+    let T = +input[0];
+    let line = 1;
+
+    for(let i = 0; i < T; i++){
+        let N = +input[line++].trim();
+
+        let arr = input[line++].trim().split(' ').map(Number);
+
+        let stack = new Stack;
+
+        for(let i = 0; i < N; i++){
+
+        }
+    }
 }
 
 if (process.env.USERNAME === "kartik") {
-    runProgram(``);
+    runProgram(`1
+    5
+    5 4 1 3 2`);
 }
 else {
     process.stdin.resume();

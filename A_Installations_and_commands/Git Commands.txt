@@ -1,3 +1,17 @@
 /* For using multiple accounts on single pc */
     set credential to true  : git config --global credential.useHttpPath true
     open .gitConfig         : git config --global -e
+
+/* Multiple github accounts using ssh keys */
+    > mkdir .ssh (if not present)
+    > cd .ssh
+    > ssh-keygen
+    > cat id-rsa.pub (copy the response)
+    
+    > after that go to github.com and generate a ssh key using above response
+
+    > notepad config
+        > #Account1
+          Host github.com
+            HostName github.com
+            IdentityFile ~/.ssh/id_rsa

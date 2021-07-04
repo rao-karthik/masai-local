@@ -67,13 +67,13 @@ function runProgram(input){
         index1.push(i);
     }
 
-    for(let i = 0; i < N; i++){
+    for(let i = N-1; i >= 0; i--){
         if(stack2.isEmpty()){
-            y.push(-1)
+            y[i] = -1;
         }
         else {
             if(stack2.top() > arr[i]){
-                y.push(index2.top() + 1)
+                y[i] = index2.top() + 1;
             }
             else {
                 while (stack2.size() > 0 && stack2.top() <= arr[i]){
@@ -81,10 +81,10 @@ function runProgram(input){
                     index2.pop();
                 }
                 if(stack2.isEmpty()){
-                    y.push(-1);
+                    y[i] = -1;
                 }
                 else {
-                    y.push(index2.top() + 1);
+                    y[i] = index2.top() + 1;
                 }
             }
         }
@@ -92,8 +92,11 @@ function runProgram(input){
         index2.push(i);
     }
 
-    console.log(x)
-    console.log(y)
+    let sum = "";
+    for(let i = 0; i < N; i++){
+        sum += x[i] + y[i] + " ";
+    }
+    console.log(sum);
 }
 
 if (process.env.USERNAME === "kartik") {
