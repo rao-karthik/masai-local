@@ -29,13 +29,15 @@
 
 2) move inside your react app folder (make sure you are on the entry folder package.json etc is located.
 
-3) run the command vercel from terminal
+3) add this in build CI='' i.e "CI='' react-scripts build"
 
-4) If not logged in, or if no account created you might be asked to. once login and authentication is setup, the terminal will ask you a few questions to setup and deploy.
+4) run the command vercel from terminal
 
-5) Once that is over, it will show its ready and gives you a production link
+5) If not logged in, or if no account created you might be asked to. once login and authentication is setup, the terminal will ask you a few questions to setup and deploy.
 
-6) If you want to deploy it to a production build, then do vercel --prod
+6) Once that is over, it will show its ready and gives you a production link
+
+7) If you want to deploy it to a production build, then do vercel --prod
 
 
 

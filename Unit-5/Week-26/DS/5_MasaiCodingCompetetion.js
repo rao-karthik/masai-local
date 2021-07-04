@@ -23,7 +23,7 @@ class Queue {
         return this.items.length;
     }
     print() {
-        console.log(this.items.toString());
+        console.log(this.items);
     }
 }
 
@@ -41,87 +41,78 @@ function runProgram(input){
 
     for (let i = 1; i <= N; i++){
         let [op, club, rollNo] = input[i].trim().split(" ");
+        club = +club;
+        rollNo = +rollNo;
+
         if(op === 'E'){
-            if(club == 1){
-                if (checkClub(master, club)){
-                    club1.enqueue(rollNo);
-                }
-                else {
-                    club1.enqueue(rollNo);
-                }
-                if(!checkClub(master, club)){
-                    master.enqueue(club);
-                    master.print()
-                }
-            }
-            else if(club == 2){
-                if (checkClub(master, club)){
-                    club2.enqueue(rollNo);
-                }
-                else {
-                    club2.enqueue(rollNo);
-                }
-                if(!checkClub(master, club)){
+            if(club === 1){
+                club1.enqueue(rollNo);
+                let available = checkClub(master, club);
+                if(!available){
                     master.enqueue(club);
                 }
             }
-            else if(club == 3){
-                if (checkClub(master, club)){
-                    club3.enqueue(rollNo);
+            else if(club === 2){
+                club2.enqueue(rollNo);
+                let available = checkClub(master, club);
+                if(!available){
+                    master.enqueue(club);
                 }
-                else {
-                    club3.enqueue(rollNo);
-                }
-                if(!checkClub(master, club)){
+            }
+            else if(club === 3){
+                club3.enqueue(rollNo);
+                let available = checkClub(master, club);
+                if(!available){
                     master.enqueue(club);
                 }
             }
             else if(club === 4){
-                if (checkClub(master, club)){
-                    club4.enqueue(rollNo);
-                }
-                else {
-                    club4.enqueue(rollNo);
-                }
-                if(!checkClub(master, club)){
+                club4.enqueue(rollNo);
+                let available = checkClub(master, club);
+                if(!available){
                     master.enqueue(club);
                 }
             }
         }
-        else if(op === 'D'){
-            const masterFront = master.front();
-            if(masterFront == 1){
-                const club1Front = club1.front();
-                // console.log(1 + " " + club1Front + " " + club1.size())
+
+        else if (op === 'D'){
+            let masterFront = master.front();
+            let clubFront;
+            if(masterFront === 1){
+                clubFront = club1.front();
                 club1.dequeue();
+
                 if(club1.isEmpty()){
-                    master.print();
                     master.dequeue();
                 }
+                console.log(1 + " " + clubFront);
             }
-            if(masterFront == 2){
-                const club2Front = club2.front();
-                // console.log(2 + " " + club2Front + " " + club2.size())
+            if(masterFront === 2){
+                clubFront = club2.front();
                 club2.dequeue();
+
                 if(club2.isEmpty()){
                     master.dequeue();
                 }
+                console.log(2 + " " + clubFront);
             }
-            if(masterFront == 3){
-                const club3Front = club3.front();
-                // console.log(3 + " " + club3Front + " " + club3.size())
+            if(masterFront === 3){
+                clubFront = club3.front();
                 club3.dequeue();
+
                 if(club3.isEmpty()){
                     master.dequeue();
                 }
+                console.log(3 + " " + clubFront);
             }
-            if(masterFront == 4){
-                const club4Front = club4.front();
-                // console.log(4+ " " + club4Front + " " + club4.size())
+            if(masterFront === 4){
+                clubFront = club4.front();
                 club4.dequeue();
+
                 if(club4.isEmpty()){
                     master.dequeue();
                 }
+                console.log(4 + " " + clubFront);
             }
         }
     }
@@ -155,8 +146,8 @@ else {
 }
 
 function checkClub(master, club){
-    for(let i = 0; i < master.length; i++){
-        if(master[i] === club){
+    for(let i = 0; i < master.size(); i++){
+        if(master.items[i] === club){
             return true;
         }
     }

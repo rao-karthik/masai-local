@@ -1,15 +1,15 @@
 const { Schema, model } = require('mongoose');
 
-const postSchema = new Schema ({
-    title: {
+const productSchema = new Schema ({
+    productName: {
         type: String,
         required: true
     },
-    body: {
+    description: {
         type: String,
         required: true
     },
-    userId: {
+    sellerId: {
         type: Schema.Types.ObjectId,
         ref: 'user',
         required: true
@@ -20,4 +20,4 @@ const postSchema = new Schema ({
     versionKey: false
 });
 
-module.exports = model('post', postSchema);
+module.exports = model('product', productSchema);
