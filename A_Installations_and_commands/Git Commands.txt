@@ -23,3 +23,5 @@
           Host github.com-anyName
             HostName github.com
             IdentityFile ~/.ssh/anyName_id_rsa
+
+    > git clone git@github.com-anyName:userId/repositoryName.git
