@@ -1,6 +1,7 @@
 /* Commands */
-    git reset --soft HEAD^1         : To undo committed changes
-    git branch -d <local-branch>    : delete local branch
+    git reset --soft HEAD^1                         : To undo committed changes
+    git branch -d <local-branch>                    : delete local branch
+    git push origin --delete <remote-branch-name>   : delete remote branch
 
 /* For using multiple accounts on single pc */
     set credential to true  : git config --global credential.useHttpPath true
