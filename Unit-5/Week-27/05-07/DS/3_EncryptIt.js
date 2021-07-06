@@ -38,8 +38,8 @@ function runProgram(input){
 }
 
 if (process.env.USERNAME === "kartik") {
-    runProgram(`All-convoYs-9-be:Alert1.
-    9`);
+    runProgram(`----------a
+    1009`);
 }
 else {
     process.stdin.resume();
