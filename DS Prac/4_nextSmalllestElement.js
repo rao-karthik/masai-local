@@ -76,8 +76,8 @@ function runProgram(input){
 
 if (process.env.USERNAME === "kartik") {
     runProgram(`1
-    5
-    5 4 1 3 2`);
+    8
+    39 27 11 4 24 32 32 1`);
 }
 else {
     process.stdin.resume();
@@ -105,11 +105,11 @@ function nextGreatest (arr, n) {
     let ans = [];
 
     for(let i = n-1; i >= 0; i--){
-        if(arr[stack.top()] > arr[i]){
+        if(arr[stack.top()] < arr[i]){
             ans.push(stack.top());
         }
         else{
-            while(arr[stack.top()] <= arr[i] && stack.size() > 0){
+            while(arr[stack.top()] >= arr[i] && stack.size() > 0){
                 stack.pop();
             }
             if(stack.isEmpty()){
@@ -132,11 +132,11 @@ function prevGreatest (arr, n) {
     let ans = [-1];
 
     for(let i = 1; i < n; i++){
-        if(arr[stack.top()] > arr[i]){
+        if(arr[stack.top()] < arr[i]){
             ans.push(stack.top());
         }
         else{
-            while(arr[stack.top()] <= arr[i] && stack.size() > 0){
+            while(arr[stack.top()] >= arr[i] && stack.size() > 0){
                 stack.pop();
             }
             if(stack.isEmpty()){
