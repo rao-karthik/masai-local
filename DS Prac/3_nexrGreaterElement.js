@@ -74,7 +74,7 @@ function runProgram(input){
     }
 }
 
-if (process.env.USERNAME === "kartik") {
+if (process.env.USER === "kartik") {
     runProgram(`1
     5
     5 4 1 3 2`);

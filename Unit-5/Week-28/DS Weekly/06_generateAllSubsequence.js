@@ -1,10 +1,24 @@
 function runProgram(input){
     input = input.trim().split(/[\r\n]+/); 
-    console.log(input)
+    
+    let n = +input[0].trim();
+    let str = input[1].trim();
+
+    let subSeq = subSequence(str, '');
+};
+
+function subSequence (str, res) {
+    if(str.length === 0){
+        console.log(res);
+        return;
+    }
+    subSequence(str.substring(1), res + str[0]);
+    subSequence(str.substring(1), res);
 }
 
 if (process.env.USER === "kartik") {
-    runProgram(``);
+    runProgram(`4
+    abcd`);
 }
 else {
     process.stdin.resume();
@@ -23,4 +37,4 @@ else {
         runProgram(read);
         process.exit(0);
     });
-}
+};

@@ -25,7 +25,7 @@ download link   : "https://medium.com/@LondonAppBrewery/how-to-download-install-
           echo "mongodb-org-mongos hold" | sudo dpkg --set-selections
           echo "mongodb-org-tools hold" | sudo dpkg --set-selections
 
-/* Start MongoDb */
+/* Start MongoDb ubuntu */
     1)  sudo systemctl start mongod
         sudo systemctl daemon-reload (if failed to start mongod.service: Unit mongod.service not found.)
 
@@ -37,3 +37,8 @@ download link   : "https://medium.com/@LondonAppBrewery/how-to-download-install-
     4)  sudo systemctl restart mongod
 
     5)  mongo
+
+/* start mongo mac */
+    1) start mongodb/brew/mongodb-community
+
+    2) brew services start mongodb/brew/mongodb-community

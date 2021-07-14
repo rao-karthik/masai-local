@@ -1,10 +1,11 @@
 function runProgram(input){
-    input = input.trim().split(/[\r\n]+/); 
-    console.log(input)
+    let steps = +input.trim();
+
+    
 }
 
 if (process.env.USER === "kartik") {
-    runProgram(``);
+    runProgram(`4`);
 }
 else {
     process.stdin.resume();
@@ -23,4 +24,4 @@ else {
         runProgram(read);
         process.exit(0);
     });
-}
+};
