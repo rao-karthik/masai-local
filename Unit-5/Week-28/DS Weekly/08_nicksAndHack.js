@@ -1,21 +1,41 @@
 function runProgram(input){
-    input = input.trim().split(/[\r\n]+/).map(Number);
+    input = input.trim().split(/[\r\n]+/);
 
-    let len = input.length;
+    let T = +input[0].trim();
 
-    let ansArr = reverseStack(input, len-1, [])
+    let K = 1;
 
-    for(let i = 0; i < ansArr.length; i++){a
-        console.log(ansArr[i]);
+    for(let i = 1; i <= T; i++){
+        let N = +input[i].trim();
+
+        let H = hack(N, K);
+        
+        if(H){
+            console.log('Yes');
+        }
+        else {
+            console.log('No');
+        }
     }
-}
+};
+
+function hack (N, K) {
+    if(N === K){
+        return true;
+    }
+    if(K > N){
+        return false;
+    }
+    return hack(N, K*10) || hack(N, K*20);
+};
 
 if (process.env.USER === "kartik") {
-    runProgram(`1
+    runProgram(`5
+    1
     2
-    3
-    4
-    -1`);
+    10
+    25
+    200`);
 }
 else {
     process.stdin.resume();
@@ -34,13 +54,4 @@ else {
         runProgram(read);
         process.exit(0);
     });
-};
-
-function reverseStack (arr, len, ans){
-    if(len === 1){
-        ans.push(arr[0]);
-        return ans;
-    }
-    ans.push(arr[len-1]);
-    return reverseStack(arr, len-1, ans);
-}   
+}

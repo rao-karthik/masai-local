@@ -1,21 +1,10 @@
 function runProgram(input){
-    input = input.trim().split(/[\r\n]+/).map(Number);
-
-    let len = input.length;
-
-    let ansArr = reverseStack(input, len-1, [])
-
-    for(let i = 0; i < ansArr.length; i++){a
-        console.log(ansArr[i]);
-    }
+    input = input.trim().split(/[\r\n]+/); 
+    console.log(input)
 }
 
 if (process.env.USER === "kartik") {
-    runProgram(`1
-    2
-    3
-    4
-    -1`);
+    runProgram(`7`);
 }
 else {
     process.stdin.resume();
@@ -34,13 +23,4 @@ else {
         runProgram(read);
         process.exit(0);
     });
-};
-
-function reverseStack (arr, len, ans){
-    if(len === 1){
-        ans.push(arr[0]);
-        return ans;
-    }
-    ans.push(arr[len-1]);
-    return reverseStack(arr, len-1, ans);
-}   
+}
