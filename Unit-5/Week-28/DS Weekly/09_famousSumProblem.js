@@ -2,21 +2,25 @@ function runProgram(input){
     input = input.trim().split(/[\r\n]+/); 
     let [n, k] = input[0].trim().split(' ').map(Number);
 
-    let sum = findSum(n.toString(), n.toString().length-1, 0);
-    let totSum = sum * k;
+    let ans = solve(n.toString());
 
-    while(totSum.toString().length > 1){
-        totSum = findSum(totSum.toString(), totSum.toString().length-1, 0)
-    }
-    console.log(totSum);
+    ans = ans * k;
+
+    console.log(solve(ans.toString()));
 }
 
-function findSum (num, len, sum){
-    if(len === 0){
-        return sum + +num[len];
+function solve(a){
+    if(a.length == 0) return 0;
+
+    else if (a.length == 1) return +a; 
+
+    let temp = 0;
+    
+    for(i = 0; i < a.length; i++) {
+        temp = temp + +a.charAt(i);
     }
-    sum += +num[len];
-    return findSum(num, len-1, sum);
+
+    return solve(temp.toString());
 }
 
 if (process.env.USER === "kartik") {

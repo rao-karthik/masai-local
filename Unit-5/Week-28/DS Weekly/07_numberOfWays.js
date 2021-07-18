@@ -1,24 +1,22 @@
 function runProgram(input){
-    input = input.trim().split(/[\r\n]+/); 
-    
-    let n = +input[0].trim();
-    let str = input[1].trim().split('');
+    input = +input.trim();
 
-    subSequence('', str, 0, n-1);
-};
+    let ways = possibleWays(input);
+    console.log(ways)
+}
 
-function subSequence (ans, arr, low, high) {
-    if(low <= high+1 && ans !== ""){
-        console.log(ans);
+function possibleWays (n) {
+    if(n < 0){
+        return 0;
     }
-    for(let i = low; i <= high; i++){
-        subSequence(ans + arr[i], arr, i+1, high);
+    else if(n === 0){
+        return 1;
     }
+    return possibleWays(n-1) + possibleWays(n-2) + possibleWays(n-3)
 }
 
 if (process.env.USER === "kartik") {
-    runProgram(`4
-    abcd`);
+    runProgram(`4`);
 }
 else {
     process.stdin.resume();
@@ -37,4 +35,4 @@ else {
         runProgram(read);
         process.exit(0);
     });
-};
+}

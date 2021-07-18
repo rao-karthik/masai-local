@@ -1,40 +1,27 @@
 function runProgram(input){
     input = input.trim().split(/[\r\n]+/); 
     
-    let [Wt, trkAvailable] = input[0].trim().split(' ').map(Number);
-    console.log(Wt, trkAvailable)
+    let [wt, trkAvailable] = input[0].trim().split(' ').map(Number);
 
     let capacity = input[1].trim().split(' ').map(Number);
-    console.log(capacity)
 
-    let ways = subSequence(capacity.join(''), '', [])
-    console.log(ways)
-
-    let count = 0;
-    for(let i = 0; i < ways.length; i++){
-        if(sum(ways[i], ways[i].length-1) === Wt){
-            count++;
-        }
-    }
-    console.log(count);
+    console.log(possibleWays(wt, capacity, 0));
 }
 
-function subSequence (str, res, ans) {
-    if(str.length === 0){
-        ans.push(res);
-        return ans;
+function possibleWays (n, arr, k){
+    if(n === k){
+        return 1;
     }
-    subSequence(str.substring(1), res, ans);
-    return subSequence(str.substring(1), res + str.charAt(0), ans);
-}
-
-function sum (str, len){
-    console.log(len)
-    if(len == 0){
+    else if (n < k) {
         return 0;
-    };
-    return str[len] + sum(str, len-1);
+    }
+    let count = 0;
+    for(let i = 0; i < arr.length; i++){
+        count += possibleWays(n, arr, k+arr[i])
+    }
+    return count;
 }
+
 
 if (process.env.USER === "kartik") {
     runProgram(`3 3

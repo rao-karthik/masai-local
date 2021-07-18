@@ -8,8 +8,8 @@ console.log(arr.join(' '));
 function quickSort(arr, low, high){
     if(low < high){
         let p = partition(arr, low, high);
-        quickSort(arr, low, p-1);
-        quickSort(arr, p+1, high);
+        quickSort(arr, low, p-1); // checking to left
+        quickSort(arr, p+1, high); // checking to the right
     }
 }
 

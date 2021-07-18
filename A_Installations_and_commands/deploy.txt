@@ -55,6 +55,7 @@
         i) If you have react-router-dom installed, then you need to do an additional step of setting redirects on netlify
        ii) In your build folder, create _redirects file.
       iii) Add the following to the _redirects file (/* /index.html 200)
+      iv) Add the following to build "&& cp _redirects ./build/_redirects"
 
 5) Now type netlify deploy and visit the link it provides to verify your account.
 
