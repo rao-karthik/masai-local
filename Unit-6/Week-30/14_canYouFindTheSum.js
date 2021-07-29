@@ -23,83 +23,92 @@ class Stack {
         return this.items.length;
     }
     print() {
-        console.log(this.items.toString());
+        console.log(this.items);
     }
 }
 
 function runProgram(input){
     input = input.trim().split(/[\r\n]+/);
-
+    
     let N = +input[0];
 
-    let arr = input[1].trim().split(' ').map(Number);
+    let A  =input[1].trim().split(' ').map(Number);
+
+    let left = nextGreaterLeft(A, N);
+    let right = nextGreaterRight(A, N);
     
-    let stack1 = new Stack
-    let index1 = new Stack
-    let stack2 = new Stack
-    let index2 = new Stack
+    let sum = [];
+    for(let i = 0; i < N; i++){
+        sum.push(left[i] + right[i]);
+    }
 
-    let x = [];
-    let y = [];
+    console.log(sum.join(' '));
+}
+
+function nextGreaterLeft (arr, N){
+    let stack = new Stack();
+    let index = new Stack();
+    let ans = []
 
     for(let i = 0; i < N; i++){
-        if(stack1.isEmpty()){
-            x.push(-1)
+        if(stack.isEmpty()){
+            ans.push(-1);
         }
         else {
-            if(stack1.top() > arr[i]){
-                x.push(index1.top() + 1)
+            if(stack.top() > arr[i]){
+                ans.push(index.top() + 1);
             }
             else {
-                while (stack1.size() > 0 && stack1.top() <= arr[i]){
-                    stack1.pop();
-                    index1.pop();
+                while(!stack.isEmpty() && stack.top() <= arr[i]){
+                    stack.pop();
+                    index.pop();
                 }
-                if(stack1.isEmpty()){
-                    x.push(-1);
+                if(stack.isEmpty()){
+                    ans.push(-1);
                 }
                 else {
-                    x.push(index1.top() + 1);
+                    ans.push(index.top() + 1);
                 }
             }
         }
-        stack1.push(arr[i]);
-        index1.push(i);
+        stack.push(arr[i]);
+        index.push(i);
     }
 
-    for(let i = N-1; i >= 0; i--){
-        if(stack2.isEmpty()){
-            y[i] = -1;
+    return ans;
+}
+
+function nextGreaterRight (arr, N){
+    let stack = new Stack();
+    let index = new Stack();
+    let ans = []
+
+    for(let i = N - 1; i >= 0; i--){
+        if(stack.isEmpty()){
+            ans.push(-1);
         }
         else {
-            if(stack2.top() > arr[i]){
-                y[i] = index2.top() + 1;
+            if(stack.top() > arr[i]){
+                ans.push(index.top() + 1);
             }
             else {
-                while (stack2.size() > 0 && stack2.top() <= arr[i]){
-                    stack2.pop();
-                    index2.pop();
+                while(!stack.isEmpty() && stack.top() <= arr[i]){
+                    stack.pop();
+                    index.pop();
                 }
-                if(stack2.isEmpty()){
-                    y[i] = -1;
+                if(stack.isEmpty()){
+                    ans.push(-1);
                 }
                 else {
-                    y[i] = index2.top() + 1;
+                    ans.push(index.top() + 1);
                 }
             }
         }
-        stack2.push(arr[i]);
-        index2.push(i);
+        stack.push(arr[i]);
+        index.push(i);
     }
 
-    console.log(x)
-    console.log(y)
-
-    let sum = "";
-    for(let i = 0; i < N; i++){
-        sum += x[i] + y[i] + " ";
-    }
-    console.log(sum);
+    return ans.reverse();
 }
 
 if (process.env.USER === "kartik") {

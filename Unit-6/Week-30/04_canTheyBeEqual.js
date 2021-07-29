@@ -1,10 +1,37 @@
 function runProgram(input){
     input = input.trim().split(/[\r\n]+/);
-    console.log(input)
+
+    let t = +input[0];
+    let line = 1;
+
+    for(let i = 1; i <= t; i++){
+        let n = +input[line++].trim();
+
+        let A = input[line++].trim().split("");
+
+        let B = input[line++].trim().split("");
+
+        A.sort();
+
+        B.sort();
+
+        if(A.join("") === B.join("")){
+            console.log("Yes")
+        }
+        else{
+            console.log("No")
+        }
+    }
 }
 
 if (process.env.USER === "kartik") {
-    runProgram(``);
+    runProgram(`2
+    2
+    ab
+    ac
+    3
+    aba
+    aab`);
 }
 else {
     process.stdin.resume();
