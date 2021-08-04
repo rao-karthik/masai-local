@@ -6,9 +6,9 @@ function generatePermutation (str, left, right){
         return;
     }
     for (let i = left; i <= right; i++){
-            str = swap(str, left ,i);
-            generatePermutation(str, left+1, right);
-        }
+        str = swap(str, left ,i);
+        generatePermutation(str, left+1, right);
+    }
 }
 
 function swap(str, i, j){

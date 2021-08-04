@@ -55,8 +55,8 @@ function merge(arr, l, m, r){
     }
 
     while(i < n2){
-        arr[k] = L[i];
-        i++;
+        arr[k] = R[j];
+        j++;
         k++;
     }
 }

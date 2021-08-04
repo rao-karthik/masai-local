@@ -1,41 +1,30 @@
 function runProgram(input){
     input = input.trim().split(/[\r\n]+/);
 
-    let [N, K] = input[0].trim().split(' ');
+    let N = +input[0];
 
     let arr = input[1].trim().split(' ');
-
-    let rotate = rotateArr(arr, K % N)
-    console.log(rotate.join(' '))
+    arr.sort((a, b)=> a-b);
+    
+    findSubsets(0, [], arr);
 }
 
-function rotateArr(A, K) {
-    if (!A.length) return A;
-    let index = -1;
-    while (++index < K) {
-        A.push(A.shift());
+function findSubsets (start, subset, arr) {
+    console.log(subset.join(' '));
+
+    for(let i = start; i < arr.length; i++){
+        if(i > start && arr[i-1] === arr[i]){
+            continue;  
+        }
+        subset.push(arr[i]);
+        findSubsets(i+1, subset, arr);
+        subset.pop();
     }
-    return A;
 }
-
-// function rotateArr(a, n, k){
-//     k = k % n;
-//     let arr = []
- 
-//     for (let i = 0; i < n; i++) {
-//         if (i < k) {
-//             arr.push(a[n + i - k]);
-//         }
-//         else {
-//             arr.push((a[i - k]));
-//         }
-//     }
-//     return arr;
-// }
 
 if (process.env.USER === "kartik") {
-    runProgram(`6 4
-    1 2 5 4 0 6`);
+    runProgram(`3
+    1 2 2`);
 }
 else {
     process.stdin.resume();

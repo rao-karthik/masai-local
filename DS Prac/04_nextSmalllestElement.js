@@ -98,7 +98,7 @@ else {
     });
 };
 
-function nextGreatest (arr, n) {
+function nextSmallest (arr, n) {
 
     let stack = new Stack();
 
@@ -124,7 +124,7 @@ function nextGreatest (arr, n) {
     return(ans.reverse());
 }
 
-function prevGreatest (arr, n) {
+function prevSmallest (arr, n) {
     let stack = new Stack();
 
     stack.push(0);
