@@ -1,7 +1,6 @@
 let str = 'abc';
 
-function generateSubSequence(str, res)
-{
+function generateSubSequence(str, res){
       if(str.length == 0) {
         console.log(res)
         return
