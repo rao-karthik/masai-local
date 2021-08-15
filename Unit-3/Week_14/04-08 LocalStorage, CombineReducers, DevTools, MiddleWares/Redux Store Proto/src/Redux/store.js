@@ -8,8 +8,8 @@ const rootReducer = combineReducers({
 })
 
 const middleWareLogger = store => next => action => {
-    console.log("dispatching action 1", action);
-    console.table(store.getState());
+    // console.log("dispatching action 1", action);
+    // console.table(store.getState());
     const val = next(action);
     console.log("done updating 1", action);
     console.table(store.getState());
