@@ -1,6 +1,5 @@
 function runProgram(input){
     input = input.trim().split(/[\r\n]+/);
-    console.log(input)
 
     let [R, C, P] = input[0].trim().split(' ').map(Number);
     
@@ -8,13 +7,73 @@ function runProgram(input){
     for(let i = 1; i <= R; i++){
         arr.push(input[i].trim().split(' ').map(Number));
     }
-    console.log(arr);
 
-    for(let i = 0; i < R; i++){
-        for(let j = 0; j < C-2; j++){
-            
+    let horizontal = horizontalCount(arr, R, C, P);
+
+    let vertical = verticalCount(arr, R, C, P);
+
+    let diagonalL = diagonalLCount(arr, R, C, P);
+
+    let diagonalR = diagonalRCount(arr, R, C, P);
+
+    let total = horizontal + vertical + diagonalL + diagonalR;
+    console.log(total)
+}
+
+function horizontalCount(arr, row, col, P){
+    let count = 0;
+
+    for(let i = 0; i < row; i++){
+        for(let j = 0; j < col-2; j++){
+            if(arr[i][j] * arr[i][j+1] * arr[i][j+2] === P){
+                count++;
+            }
         }
     }
+
+    return count;
+}
+
+function verticalCount(arr, row, col, P){
+    let count = 0;
+
+    for(let i = 0; i < row-2; i++){
+        for(let j = 0; j < col; j++){
+            if(arr[i][j] * arr[i+1][j] * arr[i+2][j] === P){
+                count++;
+            }
+        }
+    }
+
+    return count;
+}
+
+function diagonalLCount (arr, row, col, P){
+    let count = 0;
+
+    for(let i = 0; i < row-2; i++){
+        for(let j = 0; j < col-2; j++){
+            if(arr[i][j] * arr[i+1][j+1] * arr[i+2][j+2] === P){
+                count++;
+            }
+        }
+    }
+
+    return count;
+}
+
+function diagonalRCount (arr, row, col, P){
+    let count = 0;
+
+    for(let i = 0; i < row-2; i++){
+        for(let j = col-1; j >= 2; j--){
+            if(arr[i][j] * arr[i+1][j-1] * arr[i+2][j-2] === P){
+                count++;
+            }
+        }
+    }
+
+    return count;
 }
 
 if (process.env.USER === "kartik") {
