@@ -43,7 +43,15 @@ function runProgram(input){
 }
 
 if (process.env.USER === "kartik") {
-    runProgram(``);
+    runProgram(`2
+    3 3
+    1 2 1
+    1 3 1
+    1 2 1
+    3 3
+    1 2 3
+    1 1 3
+    1 2 3`);
 } 
 else if (process.env.USERNAME === "kartik") {
     runProgram(`2
