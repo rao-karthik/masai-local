@@ -1,20 +1,43 @@
 function runProgram(input){
     input = input.trim().split(/[\r\n]+/);
-    console.log(input)
 
-    let [ N, K ] = input[0].trim().split(' ').map(Number);
-    let arr = input[1].trim().split(' ').map(Number);
-}
+    let tests = +input[0];
 
-function firstOccurance (arr, N, K, left, right){
-    if(left === right){
-        
+    for(let i = 1; i <= tests; i++){
+        let num = +input[i];
+
+        console.log(findRoot(num));
     }
 }
 
+function findRoot (num){
+    if(num === 0 && num === 1){
+        return num;
+    }
+
+    let l = 1;
+    let r = num;
+
+    let res = 0;
+
+    while(l <= r){
+        let m = parseInt((l + r)/2);
+
+        if(m * m <= num){
+            l = m + 1;
+            res = m;
+        }
+        else {
+            r = m - 1;
+        }
+    }
+    return res;
+}
+
 if (process.env.USER === "kartik") {
-    runProgram(`6 3
-    2 3 3 3 6 9`);
+    runProgram(`2
+    4
+    8`);
 }
 else {
     process.stdin.resume();

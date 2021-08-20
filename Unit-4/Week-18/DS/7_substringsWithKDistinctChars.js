@@ -23,10 +23,6 @@ function runProgram(input){
 if (process.env.USER === "kartik") {
     runProgram(`4 2
     abcc`);
-} 
-else if (process.env.USERNAME === "kartik") {
-    runProgram(`11 3
-    aabcdabbcdc`);
 }
 else {
     process.stdin.resume();
@@ -55,16 +51,6 @@ function unique(str, K){
         if(hashSet.indexOf(str[i]) === -1){
             hashSet.push(str[i]);
         }
-    //     if(obj[str[i]]){
-    //         obj[str[i]]++;
-    //     }
-    //     else {
-    //         obj[str[i]] = 1;
-    //     }
-    //     if(obj[str[i]] > 1){
-    //         flag = false;
-    //         break;
-    //     }
     }
     if(hashSet.length < K){
         flag = false;

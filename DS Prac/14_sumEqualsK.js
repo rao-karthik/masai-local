@@ -37,38 +37,38 @@ function sumPair ( arr, N, K){
 // using hash Set
 // O(N)
 
-// function sumPair(arr, N, K){
-//     let hashSet = {};
+function sumPair(arr, N, K){
+    let hashSet = {};
 
-//     for(let i = 0; i < N; i++){
-//         let diff = K - arr[i];
-//         if (hashSet[arr[i]]){
-//             return 1;
-//         }
-//         else {
-//             hashSet[diff] = 1;
-//         }
-//     }
-//     return -1;
-// }
+    for(let i = 0; i < N; i++){
+        let diff = K - arr[i];
+        if (hashSet[arr[i]]){
+            return 1;
+        }
+        else {
+            hashSet[diff] = 1;
+        }
+    }
+    return -1;
+}
 
 // or
 
-// function sumPair(arr, N, K){
-//     let hashSet = [];
-//     let i = 0;
-//     while(i < N){
-//         let diff = K - arr[i];
-//         if(!hashSet.includes(diff)){
-//             hashSet.push(arr[i]);
-//         }
-//         else {
-//             return 1;
-//         }
-//         i++;
-//     }
-//     return -1;
-// }
+function sumPair(arr, N, K){
+    let hashSet = [];
+    let i = 0;
+    while(i < N){
+        let diff = K - arr[i];
+        if(!hashSet.includes(diff)){
+            hashSet.push(arr[i]);
+        }
+        else {
+            return 1;
+        }
+        i++;
+    }
+    return -1;
+}
 
 if (process.env.USER === "kartik") {
     runProgram(`1
