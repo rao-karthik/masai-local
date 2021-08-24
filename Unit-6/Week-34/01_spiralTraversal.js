@@ -20,30 +20,32 @@ function runProgram(input){
 
 function recTraverse (arr, row, col){
     let [left, right, top, bottom] = [0, col-1, 0, row-1];
-
     let ans = [];
 
     while(left <= right && top <= bottom){
-        for(let i = top; i <= bottom; i++){
+        for(i = top; i <= bottom; i++){
             ans.push(arr[i][left]);
         }
-        left++
-        for(let i = left; i <= right; i++){
+        left++;
+
+        for(i = left; i <= right; i++){
             ans.push(arr[bottom][i]);
         }
-        bottom--
+        bottom--;
+
         for(let i = bottom; i >= top; i--){
             ans.push(arr[i][right]);
         }
-        right--
+        right--;
+
         for(let i = right; i >= left; i--){
             ans.push(arr[top][i]);
         }
-        top++
+        top++;
     }
 
-    let len = row * col
-    ans = ans.slice(0, len)
+    let len = row*col;
+    ans = ans.slice(0, len);
 
     return ans;
 }
