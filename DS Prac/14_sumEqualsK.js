@@ -70,6 +70,34 @@ function sumPair(arr, N, K){
     return -1;
 }
 
+function countSubArray (arr, k){
+    let prevSum = new Map();
+    let res = 0;
+    
+    let curSum = 0;
+
+    for(let i = 0; i < arr.length; i++){
+        curSum += arr[i];
+
+        if(curSum === k){
+            res++;
+        }
+
+        if (prevSum.has(curSum - k)){
+           res += prevSum.get(curSum - k);
+        }
+
+        let count = prevSum.get(curSum);
+        if(count == null){
+            prevSum.set(curSum, 1);
+        }
+        else {
+            prevSum.set(curSum, count+1);
+        }
+    }
+    return res;
+}
+
 if (process.env.USER === "kartik") {
     runProgram(`1
     5 2

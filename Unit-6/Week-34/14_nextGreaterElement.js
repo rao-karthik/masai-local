@@ -29,7 +29,7 @@ class Stack {
 
 function runProgram(input){
     input = input.trim().split(/[\r\n]+/);
-
+    
     let tests = +input[0];
     let line = 1;
 
@@ -51,9 +51,10 @@ function nextGreater(arr, N){
             ans.push(stack.top());
         }
         else {
-            while(stack.size() > 0 && stack.top() <= arr[i]){
+            while(!stack.isEmpty() && stack.top() <= arr[i]){
                 stack.pop();
             }
+
             if(stack.isEmpty()){
                 ans.push(-1);
             }

@@ -26,7 +26,7 @@ export const MemoOut = memo(({ id, title, body, verify, toggleVerify, timer }) =
     const b = Math.floor(Math.random()*256)
 
     const randomColor = useMemo(() => `rgb(${r}, ${g}, ${b})`, [])
-    
+    // const randomColor = `rgb(${r}, ${g}, ${b})`
     return (
         <div style={{background:`${randomColor}`}}>
             <h3>{title}</h3>
