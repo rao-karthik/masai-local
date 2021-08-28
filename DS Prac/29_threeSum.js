@@ -1,4 +1,4 @@
-let num = [1,2,-2,-1];
+let num = [-1,0,1,2,-1,-4];
 
 function threeSum (nums){
     let n = nums.length;
