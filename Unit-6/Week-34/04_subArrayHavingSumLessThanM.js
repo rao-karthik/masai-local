@@ -14,11 +14,11 @@ function runProgram(input){
     }
 }
 
-function countSubarrays(arr, n, k){
+function countSubarrays(arr, n, M){
     let start = 0, end = 0, count = 0, sum = arr[0];
 
     while(start < n && end < n){
-        if(sum < k){
+        if(sum < M){
             end++;
 
             if(end >= start){

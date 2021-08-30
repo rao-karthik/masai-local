@@ -20,10 +20,10 @@ export const Timer = ({hidden}) => {
     const stopTimer = ()=>{
         clearInterval(timer.current);
         setRunning(false);
-    } 
+    }
 
     const resetTimer = ()=>{
-        setTime( initTime);
+        setTime(initTime);
         stopTimer();
     }
 
